@@ -1,0 +1,290 @@
+﻿@model TrainingTool.Models.Course /*@model IDictionary<string, object> @model TrainingTool.Models.Course @model TrainingTool.Models.DepartAndCourse */
+@{
+    ViewBag.Title = "Create";
+    int hasTrainee = (int)ViewData["hasTrainee"];
+
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery")
+     @Scripts.Render("~/bundles/jqueryui")
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="@Url.Content("/Scripts/bootstrap.js")" type="text/javascript"></script>   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+  <script src="~/Scripts/chosen.jquery.js" type="text/javascript"></script>
+     <script type="text/javascript" src="Scripts/json2.js"></script>
+     <script src="@Url.Content("~/Scripts/JsonNet.js")" type="text/javascript"></script>
+@*<meta name="description" content="jquery text文本框选择器特效，点击text文本框触发事件，弹出层让用户选择点击自己的学校text value赋值弹出层关闭。" />
+<link rel="stylesheet" href="~/Content/style.css" />*@
+  <link rel="stylesheet" href="~/Content/chosen.css" />
+    <link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:14px/180% Arial, Helvetica, sans-serif, "新宋体";}
+.demo{width:600px;margin:30px auto;}
+.demo th,.demo td{font-size:20px;padding-bottom:17px;line-height:28px;color:#666;font-family:"新宋体";font-weight:normal;}
+.demo th em{color:#ff0000;font-style:normal;}
+.demo td .stext{border:1px solid #ccc;font-size:11px;height:26px;line-height:26px;padding:0 3px;width:214px;color:#666;}
+/* choose-box-wrapper */
+
+#choose-box-wrapper{width:500px;background:#000;background-color:rgba(0, 0, 0, 0.5);padding:2px;border-radius:1px;display:none;}
+#choose-box{border:1px solid #005EAC;width:500px;background:#fff;}
+#choose-box-title{background:#20b2aa;color:white;padding:4px 10px 5px;font-size:12px;font-weight:700;margin:0;}
+#choose-box-title span{font-family: Verdana, STHeiTi, Tahoma,simsun, sans-serif;}
+#choose-a-type, #choose-a-course{margin:5px 0px 0px 0px;border:1px solid #C3C3C3;}
+#choose-a-type a{display:inline-block;height:18px;line-height:18px;color:#005EAC;text-decoration:none;font-size:9pt;font-family: Verdana, STHeiTi,Tahoma, simsun, sans-serif;margin:2px 5px;padding:1px;text-align:center;}
+#choose-a-type a:hover{text-decoration:underline;cursor:pointer;}
+#choose-a-type .choosen{background:#20b2aa;color:white;}
+#choose-a-course{overflow-x:hidden;overflow-y:auto;height:200px;}
+#choose-a-course a{height:18px;line-height:18px;color:#005EAC;text-decoration:none;font-size:9pt;font-family: Verdana, STHeiTi, Tahoma,simsun, sans-serif;float:left;width:360px;margin:4px 12px;padding-left:10px;background:url(http://pic002.cnblogs.com/images/2012/70278/2012072500060712.gif) no-repeat 0 9px;}
+#choose-a-course a:hover{background:#20b2aa;color:#fff;}
+#choose-box-bottom{background:#F0F5F8;padding:8px;text-align:right}
+#choose-box-bottom input{vertical-align:middle;text-align:center;background:#20b2aa;color:white;border-top:1px solid #B8D4E8;border-left:1px solid #B8D4E8;border-right:1px solid #114680;border-bottom:1px solid #114680;cursor:pointer;width:60px;height:25px;margin-top:6px;margin-right:6px;}
+</style>  
+</head>
+<body>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                        @{
+                            HttpCookie _cookie = Request.Cookies["User"];
+                            string nowUserId = _cookie["EmployeeId"];
+                        }
+                    <li >@Html.ActionLink("Index", "Index", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Study Management", "studentIndex", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li class="active">@Html.ActionLink("Course Management", "teachersIndex", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+               @{
+                        if(hasTrainee==1)
+                        {
+                            <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                        }
+                    }
+                     </ul>
+            </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span3"></div>
+        <div class="span6" align="center">
+            @using (Html.BeginForm("Create", "Course", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                <fieldset class="form-horizontal">
+                    <legend>Course</legend>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Name)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Name, new { style = "width:450px; font-size:11px; color:#999999;", @class = "stext", name = "courseName", id = "course-name", value = "请输入课程名称", onblur = "if(this.value==''){this.value='请输入课程名称'}", onfocus = "if(this.value=='请输入课程名称'){this.value=''}" })
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Type)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Type, new { onclick = "pop()", @class = "stext", name = "courseType", id = "course-type", style = "width = 450px; font-size:11px; color:#999999;" , value = "请选择或创建合适的类别", onblur = "if(this.value==''){this.value='请选择或创建合适的类别'}", onfocus = "if(this.value=='请选择或创建合适的类别'){this.value=''}" })
+                        @Html.ValidationMessageFor(model => model.Type)
+                    </div>
+                    <div class="editor-label">
+                    
+                        @Html.LabelFor(model => model.Introduction)
+
+                    </div>
+                    <div class="editor-field" >
+                        @Html.TextBoxFor(model => model.Introduction, new { style="width:450px; height:80px;" })
+                        @Html.ValidationMessageFor(model => model.Introduction)
+                    </div>
+                   <div class="editor-label">
+            @Html.LabelFor(model => model.ForDepart)
+        </div>    
+        @{
+             List<string> departs = ViewData["list"] as List<string>;
+             var selectList = new MultiSelectList(departs);
+          }
+        <div class="editor-field">
+            @Html.ListBoxFor(model => model.ForDepart,selectList,new {@class="chzn-select",style="width:350px;",tabindex="18",id="multiple-label",multiple="multiple"})
+            @Html.ValidationMessageFor(model => model.ForDepart)
+        </div>
+                    @*<div class="side-by-side clearfix">     //上传文件
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.url)
+                        </div>
+                    </div>
+                    <div class="editor-field">
+                        <input type="file" name="file" />           
+                    </div>*@
+                    <p>
+                        <input type="submit" onclick="createNewType()" class="btn btn-large btn-info" value="Create" />
+                    </p>
+                  <div id="choose-box-wrapper">    
+	                    <div id="choose-box">
+		                    <div id="choose-box-title">
+			                    <span>选择类别</span>
+		                    </div>
+		                    <div id="choose-a-type"></div>
+		                    <div id="choose-a-course"></div>
+		                    <div id="choose-box-bottom">
+			                    <input type="button" onclick="hide()" value="关闭" />
+		                    </div>
+	                    </div>
+                    </div><!--choose-box-wrapper end-->
+                </fieldset>
+            }
+
+            <div>
+                 @Html.ActionLink("Back to List", "teachersIndex",new { lastTime=DateTime.Now, userId= nowUserId })
+            </div>
+        </div>
+
+        <div class="span3"></div>
+    </div>
+</body> 
+}
+  <script type="text/javascript">
+      var config = {
+          '.chzn-select': {},
+          '.chzn-select-deselect': { allow_single_deselect: true },
+          '.chzn-select-no-single': { disable_search_threshold: 10 },
+          '.chzn-select-no-results': { no_results_text: 'Oops, nothing found!' },
+          '.chzn-select-width': { width: "95%" }
+      }
+      for (var selector in config) {
+          $(selector).chosen(config[selector]);
+      }
+
+      window.courseList;
+      window.recordNewType;
+      window.recordFirsrClass;
+      window.newTypeID;
+      function pop() {
+          makeCenter();
+          $.ajax({
+              url: "/Course/getLists",
+              type: "GET",
+              dataType: "json",
+              data: "",
+              success: function (data) {
+
+                  window.courseList = [{
+                      "id": 1,
+                      "course": data.ls1,
+                      "name": "Technology"
+                  },
+          {
+              "id": 2,
+              "course": data.ls2,
+              "name": "Business"
+          },
+          {
+              "id": 3,
+              "course": data.ls3,
+              "name": "System"
+          }]
+
+              }
+          })
+          initType();
+          $('[type-id="1"]').addClass('choosen');
+          initCourse(1);
+      }
+      function createNewType() {
+
+          switch (window.recordFirsrClass) {
+              case 1:
+                  window.newTypeID = parseInt('@ViewData["count1"]') + 10001;
+                break;
+            case 2:
+                window.newTypeID = parseInt('@ViewData["count2"]') + 20001;
+                break;
+            case 3:
+                window.newTypeID = parseInt('@ViewData["count3"]') + 30001;
+                break;
+            default:
+                // window.newTypeID = 10010;
+                break;
+        }
+
+        //alert("id:" + window.newTypeID + "type:" + window.recordNewType);
+        var data = { typeID: window.newTypeID.toString(), Name: window.recordNewType };
+        $.post("../Course/AddNewType", { newType: String.toSerialize(data) });
+    }
+
+         //隐藏窗口
+         function hide() {
+             $('#choose-box-wrapper').css("display", "none");
+         }
+
+         function initType() {
+
+             //原先的省份列表清空
+             $('#choose-a-type').html('');
+
+             for (i = 0; i < window.courseList.length; i++) {
+                 $('#choose-a-type').append('<a href="javascript:void(0);" class="type-item" type-id="' + window.
+                     window.courseList[i].id + '">' + window.courseList[i].name + '</a>');
+
+             }
+
+             //添加省份列表项的click事件
+             $('.type-item').bind('click', function () {
+                 var item = $(this);
+                 var type = item.attr('type-id');
+                 var choosenItem = item.parent().find('.choosen');
+                 if (choosenItem)
+                     $(choosenItem).removeClass('choosen');
+                 item.addClass('choosen');
+
+                 //更新大学列表
+                 initCourse(type);
+             });
+         }
+
+         function initCourse(typeID) {
+
+             //原先的学校列表清空
+             $('#choose-a-course').html('');
+             var courses = window.courseList[typeID - 1].course;
+             for (i = 0; i < courses.length; i++) {
+                 $('#choose-a-course').append('<a href="javascript:void(0);" class="course-item" course-id="' + courses[i].id + '">' + courses[i].name + '</a>');
+             }
+             $('#choose-a-course').append('<p>Create a new type:</p><input type="text"id="newTypetext" name="newTypetext" class="newTypeName"/>');
+             $('#choose-a-course').append('<input type="button" name="newTypebutton" class="createNewType" value="Create" onclick="lll(' + typeID + ')"/>');
+             //新添加类型
+
+             //添加大学列表项的click事件
+             $('.course-item').bind('click', function () {
+                 var item = $(this);
+                 var course = item.attr('course-id');
+
+                 //更新选择大学文本框中的值
+                 $('#course-type').val(item.text());
+
+                 //关闭弹窗
+                 hide();
+             });
+         }
+
+         function makeCenter() {
+             $('#choose-box-wrapper').css("display", "block");
+             $('#choose-box-wrapper').css("position", "absolute");
+             $('#choose-box-wrapper').css("top", Math.max(0, (($(window).height() - $('#choose-box-wrapper').height()) / 2) + $(window).scrollTop()) + "px");
+             $('#choose-box-wrapper').css("left", Math.max(0, (($(window).width() - $('#choose-box-wrapper').width()) / 2) + $(window).scrollLeft()) + "px");
+         }
+         function lll(typeID) {
+             document.getElementById("course-type").value = document.getElementById("newTypetext").value;
+             window.recordFirsrClass = typeID;
+
+             window.recordNewType = document.getElementById("newTypetext").value;
+             hide();
+         }
+</script>
+</html>

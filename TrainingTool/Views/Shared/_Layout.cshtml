@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="zh" class="fuelux">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Equities Training Portal</title>
+        <meta name="viewport" content="width=device-width" />
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/knockout")
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @RenderSection("scripts", required: false)
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/excanvas.js"></script>
+        <script src="~/Scripts/fullcalendar.js"></script>
+        <script src="~/Scripts/charisma.js"></script>
+        <style type="text/css">
+        p#logo {
+            float: left;
+            font: 27px 'Segoe UI Light',Segoe UI,Tahoma Light,Arial Light,Helvetica,sans-serif;
+            font-weight: lighter;
+            margin-bottom: 1px;
+            position: relative;
+            margin-right: 10px;
+        }
+        .semi {
+            font: 27px 'Segoe UI Semibold','Segoe-Semibold',Segoe UI,Tahoma,Arial,Helvetica,sans-serif;
+            color: #ffffff;
+        }
+        span#tagline {
+            color: #6a747e;
+            font-size: 0.50em;
+            padding-left: 16px;
+            overflow: hidden;
+        }
+    </style>
+    </head>
+    <body>
+        <header/>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        @*<footer>
+            <div class="content-wrapper">
+                <div class="container">
+                    <p>&copy; @DateTime.Now.Year - By bugYongcun</p>
+                </div>
+            </div>
+        </footer>*@
+    </body>
+</html>

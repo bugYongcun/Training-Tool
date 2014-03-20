@@ -1,0 +1,788 @@
+﻿@model TrainingTool.Models.Course
+<link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+@*model TrainingTool.Models.testList*@
+@{
+  
+    ViewBag.Title = "addTest";
+    string nowState = ViewData["type"] as string;
+    TrainingTool.Models.Test t1 = ViewData["test1"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t2 = ViewData["test2"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t3 = ViewData["test3"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t4 = ViewData["test4"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t5 = ViewData["test5"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t6 = ViewData["test6"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t7 = ViewData["test7"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t8 = ViewData["test8"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t9 = ViewData["test9"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t10 = ViewData["test10"] as TrainingTool.Models.Test;
+    int hasTrainee = (int)ViewData["hasTrainee"];
+}
+
+<div class="navbar">
+            @{
+                HttpCookie _cookie = Request.Cookies["User"];
+                string nowUserId = _cookie["EmployeeId"];
+            }
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                    <li>@Html.ActionLink("Index", "Index", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Study Management", "studentIndex", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li>@Html.ActionLink("Course Management", "teachersIndex", new {lastTime=DateTime.Now,  userId = nowUserId })</li>
+                     @{
+                        if(hasTrainee==1)
+                        {
+                            <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                        }
+                    }
+                </ul>
+            </div>
+    </div>
+
+    <div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span10" align="left">  
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+      
+    <fieldset>
+        <legend>Edit Test</legend>
+        @Html.TextBox("nowCourse", Model.ID.ToString(), new { style = "display:none;" })
+        @{if (nowState == "edit")
+          {
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>1. </label>
+                 @Html.TextBox("t1content",t1.content)
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t1answer", "A",t1.answer=="A"?true:false)
+                        @Html.Label("A:") 
+                        @Html.TextBox("t1A",t1.chooseA)   
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t1answer", "B",t1.answer=="B"?true:false)
+                        @Html.Label("B:") 
+                        @Html.TextBox("t1B",t1.chooseB)   
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t1answer", "C",t1.answer=="C"?true:false)
+                        @Html.Label("C:") 
+                        @Html.TextBox("t1C",t1.chooseC)  
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t1answer", "D",t1.answer=="D"?true:false)
+                        @Html.Label("D:") 
+                        @Html.TextBox("t1D",t1.chooseD)  
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>2. </label>
+                 @Html.TextBox("t2content",t2.content)
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t2answer", "A",t2.answer=="A"?true:false)
+                        @Html.Label("A:") 
+                        @Html.TextBox("t2A",t1.chooseA)   
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t2answer", "B",t2.answer=="B"?true:false)
+                        @Html.Label("B:") 
+                        @Html.TextBox("t2B",t2.chooseB)   
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t2answer", "C",t2.answer=="C"?true:false)
+                        @Html.Label("C:") 
+                        @Html.TextBox("t2C",t2.chooseC)  
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t2answer", "D",t2.answer=="D"?true:false)
+                        @Html.Label("D:") 
+                        @Html.TextBox("t2D",t2.chooseD)  
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+              
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>3. </label>
+                 @Html.TextBox("t3content",t3.content)
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t3answer", "A",t3.answer=="A"?true:false)
+                        @Html.Label("A:") 
+                        @Html.TextBox("t3A",t3.chooseA)   
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t3answer", "B",t3.answer=="B"?true:false)
+                        @Html.Label("B:") 
+                        @Html.TextBox("t3B",t3.chooseB)   
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t3answer", "C",t3.answer=="C"?true:false)
+                        @Html.Label("C:") 
+                        @Html.TextBox("t3C",t3.chooseC)  
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t3answer", "D",t3.answer=="D"?true:false)
+                        @Html.Label("D:") 
+                        @Html.TextBox("t3D",t3.chooseD)  
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+              
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>4. </label>
+                 @Html.TextBox("t4content",t4.content)
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t4answer", "A",t4.answer=="A"?true:false)
+                        @Html.Label("A:") 
+                        @Html.TextBox("t4A",t4.chooseA)   
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t4answer", "B",t4.answer=="B"?true:false)
+                        @Html.Label("B:") 
+                        @Html.TextBox("t4B",t4.chooseB)   
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t4answer", "C",t4.answer=="C"?true:false)
+                        @Html.Label("C:") 
+                        @Html.TextBox("t4C",t4.chooseC)  
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t4answer", "D",t4.answer=="D"?true:false)
+                        @Html.Label("D:") 
+                        @Html.TextBox("t4D",t4.chooseD)  
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>5. </label>
+                 @Html.TextBox("t5content",t5.content)
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t5answer", "A",t5.answer=="A"?true:false)
+                        @Html.Label("A:") 
+                        @Html.TextBox("t5A",t5.chooseA)   
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t5answer", "B",t5.answer=="B"?true:false)
+                        @Html.Label("B:") 
+                        @Html.TextBox("t5B",t5.chooseB)   
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t5answer", "C",t5.answer=="C"?true:false)
+                        @Html.Label("C:") 
+                        @Html.TextBox("t5C",t5.chooseC)  
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t5answer", "D",t5.answer=="D"?true:false)
+                        @Html.Label("D:") 
+                        @Html.TextBox("t5D",t5.chooseD)  
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>6. </label>
+                 @Html.TextBox("t6content",t6.content)
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t6answer", "A",t6.answer=="A"?true:false)
+                        @Html.Label("A:") 
+                        @Html.TextBox("t6A",t6.chooseA)   
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t6answer", "B",t6.answer=="B"?true:false)
+                        @Html.Label("B:") 
+                        @Html.TextBox("t6B",t6.chooseB)   
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t6answer", "C",t6.answer=="C"?true:false)
+                        @Html.Label("C:") 
+                        @Html.TextBox("t6C",t6.chooseC)  
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t6answer", "D",t6.answer=="D"?true:false)
+                        @Html.Label("D:") 
+                        @Html.TextBox("t6D",t6.chooseD)  
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>7. </label>
+                 @Html.TextBox("t7content",t7.content)
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t7answer", "A",t7.answer=="A"?true:false)
+                        @Html.Label("A:") 
+                        @Html.TextBox("t7A",t7.chooseA)   
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t7answer", "B",t7.answer=="B"?true:false)
+                        @Html.Label("B:") 
+                        @Html.TextBox("t7B",t7.chooseB)   
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t7answer", "C",t7.answer=="C"?true:false)
+                        @Html.Label("C:") 
+                        @Html.TextBox("t7C",t7.chooseC)  
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t7answer", "D",t7.answer=="D"?true:false)
+                        @Html.Label("D:") 
+                        @Html.TextBox("t7D",t7.chooseD)  
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>8. </label>
+                 @Html.TextBox("t8content",t8.content)
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t8answer", "A",t8.answer=="A"?true:false)
+                        @Html.Label("A:") 
+                        @Html.TextBox("t8A",t8.chooseA)   
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t8answer", "B",t8.answer=="B"?true:false)
+                        @Html.Label("B:") 
+                        @Html.TextBox("t8B",t8.chooseB)   
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t8answer", "C",t8.answer=="C"?true:false)
+                        @Html.Label("C:") 
+                        @Html.TextBox("t8C",t8.chooseC)  
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t8answer", "D",t8.answer=="D"?true:false)
+                        @Html.Label("D:") 
+                        @Html.TextBox("t8D",t8.chooseD)  
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>9. </label>
+                 @Html.TextBox("t9content",t9.content)
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t9answer", "A",t9.answer=="A"?true:false)
+                        @Html.Label("A:") 
+                        @Html.TextBox("t9A",t9.chooseA)   
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t9answer", "B",t9.answer=="B"?true:false)
+                        @Html.Label("B:") 
+                        @Html.TextBox("t9B",t9.chooseB)   
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t9answer", "C",t9.answer=="C"?true:false)
+                        @Html.Label("C:") 
+                        @Html.TextBox("t9C",t9.chooseC)  
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t9answer", "D",t9.answer=="D"?true:false)
+                        @Html.Label("D:") 
+                        @Html.TextBox("tD",t9.chooseD)  
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>10.Short question:  </label>
+                @Html.TextBox("t10content",t10.content, new { @class="input-xxlarge"})  
+            </div>
+            <div class="editor-field">
+                <label>Suggest Answer:  </label>
+                @Html.TextBox("t10answer",t10.answer, new { @class="input-xxlarge"})  
+            </div> 
+            </div>
+            </div>  
+          }
+          else
+          {
+             
+              <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>1. @t1.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t1", "A")
+                        <label>A. @t1.chooseA</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t1", "B")
+                        <label>B. @t1.chooseB</label>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t1", "C")
+                        <label>C. @t1.chooseC</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t1", "D")
+                        <label>D. @t1.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            <div class="editor-field">
+                <label>Right Answer: @t1.answer</label>
+            </div>
+            </div>
+            </div>
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>2. @t2.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t2", "A")
+                        <label>A. @t2.chooseA</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t2", "B")
+                        <label>B. @t2.chooseB</label>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t2", "C")
+                        <label>C. @t2.chooseC</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t2", "D")
+                        <label>D. @t2.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            <div class="editor-field">
+                <label>Right Answer: @t2.answer</label>
+            </div>
+            </div>
+            </div>
+             
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>3. @t3.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t3", "A")
+                        <label>A. @t3.chooseA</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t3", "B")
+                        <label>B. @t3.chooseB</label>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t3", "C")
+                        <label>C. @t3.chooseC</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t3", "D")
+                        <label>D. @t3.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            <div class="editor-field">
+                <label>Right Answer: @t3.answer</label>
+            </div>
+            </div>
+            </div> 
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>4. @t4.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t4", "A")
+                        <label>A. @t4.chooseA</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t4", "B")
+                        <label>B. @t4.chooseB</label>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t4", "C")
+                        <label>C. @t4.chooseC</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t4", "D")
+                        <label>D. @t4.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            <div class="editor-field">
+                <label>Right Answer: @t4.answer</label>
+            </div>
+            </div>
+            </div>
+
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>5. @t5.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t5", "A")
+                        <label>A. @t5.chooseA</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t5", "B")
+                        <label>B. @t5.chooseB</label>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t5", "C")
+                        <label>C. @t5.chooseC</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t5", "D")
+                        <label>D. @t5.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            <div class="editor-field">
+                <label>Right Answer: @t5.answer</label>
+            </div>
+            </div>
+            </div>
+
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>6. @t6.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t6", "A")
+                        <label>A. @t6.chooseA</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t6", "B")
+                        <label>B. @t6.chooseB</label>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t6", "C")
+                        <label>C. @t6.chooseC</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t6", "D")
+                        <label>D. @t6.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            <div class="editor-field">
+                <label>Right Answer: @t6.answer</label>
+            </div>
+            </div>
+            </div>
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>7. @t7.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t7", "A")
+                        <label>A. @t7.chooseA</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t7", "B")
+                        <label>B. @t7.chooseB</label>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t7", "C")
+                        <label>C. @t7.chooseC</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t7", "D")
+                        <label>D. @t7.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            <div class="editor-field">
+                <label>Right Answer: @t7.answer</label>
+            </div>
+            </div>
+            </div>
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>8. @t8.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t8", "A")
+                        <label>A. @t8.chooseA</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t8", "B")
+                        <label>B. @t8.chooseB</label>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t8", "C")
+                        <label>C. @t8.chooseC</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t8", "D")
+                        <label>D. @t8.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            <div class="editor-field">
+                <label>Right Answer: @t8.answer</label>
+            </div>
+            </div>
+            </div>
+            
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>9. @t9.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t9", "A")
+                        <label>A. @t9.chooseA</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t9", "B")
+                        <label>B. @t9.chooseB</label>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="editor-field">
+                        @Html.RadioButton("t9", "C")
+                        <label>C. @t9.chooseC</label>
+                    </div>
+                </div>
+                <div class="span3 ">
+                    <div class="editor-field">
+                        @Html.RadioButton("t9", "D")
+                        <label>D. @t9.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            <div class="editor-field">
+                <label>Right Answer: @t9.answer</label>
+            </div>
+            </div>
+            </div>
+              
+            <div class="row-fluid ">
+            <div class="span12 well">
+            <div class="editor-field">
+                <label>10. @t10.content</label>
+            </div>
+            <div class="editor-field">
+                <label>Suggest Answer: @t10.answer </label>
+            </div> 
+            </div>
+            </div>  
+ 
+              //可以加返回的链接
+          }
+
+          if (nowState == "edit")
+          {
+      <p align="middle">
+            <input type="submit"  class="btn btn-primary" value="Submit" />
+        </p>
+          }
+}
+    </fieldset>
+     
+}
+    </div>
+    <div class="span1"></div>
+    </div>
+
+
+
+

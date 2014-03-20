@@ -1,0 +1,21 @@
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket\bin\Debug\ValueWebSocket.dll
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket\bin\Debug\ValueWebSocket.pdb
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket\bin\Debug\Microsoft.Office.Interop.Excel.dll
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket\bin\Debug\ValueHelper.pdb
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket\obj\Debug\ResolveAssemblyReference.cache
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket\obj\Debug\ValueWebSocket.dll
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket\obj\Debug\ValueWebSocket.pdb
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\WebSocket\ValueWebSocket\bin\Debug\ValueWebSocket.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\WebSocket\ValueWebSocket\bin\Debug\ValueWebSocket.pdb
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\WebSocket\ValueWebSocket\bin\Debug\Microsoft.Office.Interop.Excel.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\WebSocket\ValueWebSocket\bin\Debug\ValueHelper.pdb
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\WebSocket\ValueWebSocket\obj\Debug\ValueWebSocket.csprojResolveAssemblyReference.cache
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\WebSocket\ValueWebSocket\obj\Debug\ValueWebSocket.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\WebSocket\ValueWebSocket\obj\Debug\ValueWebSocket.pdb
+F:\Users\slt\Desktop\tool\WebSocket\ValueWebSocket\bin\Debug\ValueWebSocket.dll
+F:\Users\slt\Desktop\tool\WebSocket\ValueWebSocket\bin\Debug\ValueWebSocket.pdb
+F:\Users\slt\Desktop\tool\WebSocket\ValueWebSocket\bin\Debug\Microsoft.Office.Interop.Excel.dll
+F:\Users\slt\Desktop\tool\WebSocket\ValueWebSocket\bin\Debug\ValueHelper.pdb
+F:\Users\slt\Desktop\tool\WebSocket\ValueWebSocket\obj\Debug\ValueWebSocket.csprojResolveAssemblyReference.cache
+F:\Users\slt\Desktop\tool\WebSocket\ValueWebSocket\obj\Debug\ValueWebSocket.dll
+F:\Users\slt\Desktop\tool\WebSocket\ValueWebSocket\obj\Debug\ValueWebSocket.pdb

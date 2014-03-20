@@ -1,0 +1,37 @@
+﻿<p>
+    @if (Model.HasPreviousPage)
+    {
+        @Html.ActionLink("<< First", "Index", new {
+            page = 1, sortOrder = ViewBag.CurrentSortOrder })
+        @Html.Raw("&nbsp;");
+        @Html.ActionLink("< Prev", "Index", new {
+            page = Model.PageNumber - 1, sortOrder =
+                ViewBag.CurrentSortOrder })
+    }
+    else
+    {
+        @:<< First
+        @Html.Raw("&nbsp;");
+        @:< Prev
+    }
+
+    &nbsp;&nbsp;
+
+    @if (Model.HasNextPage)
+    {
+        @Html.ActionLink("Next >", "Index", new {
+            page = Model.PageNumber + 1,
+                sortOrder = ViewBag.CurrentSortOrder })
+        @Html.Raw("&nbsp;");
+        @Html.ActionLink("Last >>", "Index", new {
+            page = Model.PageCount,
+                sortOrder = ViewBag.CurrentSortOrder })
+    }
+    else
+    {
+        @:Next >
+        @Html.Raw("&nbsp;")
+        @:Last >>
+    }
+
+</p>

@@ -1,0 +1,209 @@
+﻿@model PagedList.StaticPagedList<TrainingTool.Models.User>
+
+@using PagedList
+@using PagedList.Mvc
+@using TrainingTool.Models
+@using TrainingTool.Repository
+
+@{
+    ViewBag.Title = "Admin Index";
+}
+
+@{
+    string AdminEmployeeId = "";
+    HttpCookie _cookie = Request.Cookies["Admin"];
+    if (_cookie == null) { AdminEmployeeId = ""; }
+    else { AdminEmployeeId = _cookie["EmployeeId"];}
+
+    AdminRepository adminRsy = new AdminRepository();
+    var Admin = adminRsy.Find(AdminEmployeeId);
+    string _admin = Admin.UserName as string;
+}
+
+
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css"/>
+
+<header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div>
+                <p id="logo">
+                    <p class="semi"> Training Tool
+                        <span id="tagline">back-stage management page <a href="#" class="pull-right" style="color:#ffffff; font-size:1.5em"> Welcome! @_admin​ </a></span> 
+                    </p>     
+                </p>
+                <div class="nav-collapse collapse">
+                    
+                </div>
+            </div>
+                
+        </div>
+    </div>
+</header>
+	
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2 main-menu-span">
+            <br/><br/><br/><br/>
+			<div class="well nav-collapse sidebar-nav affix">
+				<ul class="nav nav-tabs nav-stacked main-menu">
+					<li class="nav-header hidden-tablet">Main</li>
+					<li style="margin-left: -2px;"><a href="~/User/Index">User Manager</a></li>
+					<li style="margin-left: -2px;"><a href="~/Admin/CourseApplyIndex">Course Apply</a></li>
+                    <li style="margin-left: -2px;"><a href="~/CourseApply/Index">User Complaint</a></li>
+				</ul>
+			</div><!--/.well -->
+		</div>
+        <div id="content" class="span10">
+            <h2>User List</h2>
+            <br/>
+            <div style="float:left">
+                <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">Create New</a>
+            </div>
+
+            <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="myModalLabel">Create New User</h3>
+                </div>
+                <div class="modal-body" style="margin-left:auto;margin-right:auto;text-align:center;">
+                    @using (Html.BeginForm("Create", "User", FormMethod.Post, new { name="newUser"}))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        TrainingTool.Models.User user = new TrainingTool.Models.User();
+                
+                        <div class="row">
+                            <fieldset>
+                                <legend />
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => user.EmployeeId)
+                                </div>
+                                <div class="editor-field">
+                                    <input id="EmployeeId" name="EmployeeId" type="text" value="@user.EmployeeId"> 
+                                    @Html.ValidationMessageFor(model => user.EmployeeId)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => user.DepartmentId)
+                                </div>
+                                <div class="editor-field"> 
+                                    <input id="DepartmentId" name="DepartmentId" type="text" value="@user.DepartmentId">
+                                    @Html.ValidationMessageFor(model => user.DepartmentId)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => user.UserName)
+                                </div>
+                                <div class="editor-field">
+                                    <input id="UserName" name="UserName" type="text" value="@user.UserName">
+                                    @Html.ValidationMessageFor(model => user.UserName)
+                                </div>
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => user.Password)
+                                </div>
+                                <div class="editor-field">
+                                    <input id="Password" name="Password" type="password" value = "123456", readonly = "true" />
+                                    @Html.ValidationMessageFor(model => user.Password)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => user.Gender)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.RadioButton("Gender", 0) male @Html.RadioButton("Gender", 1) female @Html.RadioButton("Gender", 2, true) secret
+                                    @Html.ValidationMessageFor(model => user.Gender)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => user.Email)
+                                </div>
+                                <div class="editor-field">
+                                    <input id="Email" name="Email" type="email" value="@user.Email" />
+                                    @Html.ValidationMessageFor(model => user.Email)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => user.Tel)
+                                </div>
+                                <div class="editor-field">
+                                    <input id="Tel" name="Tel" type="tel" value="@user.Tel">
+                                    @Html.ValidationMessageFor(model => user.Tel)
+                                </div>
+
+                            </fieldset>
+                        </div>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                    <button class="btn btn-primary" id="save">Save changes</button>
+                </div>    
+            </div>
+
+            <script type="text/javascript">
+                $("#save").click(function create() {
+                    document.newUser.submit();
+                })
+            </script>
+
+            <div style="float:right">
+                @using (Html.BeginForm("Index", "User", FormMethod.Post))
+                {
+                    <div>  
+                        <form class='form-inline'>
+                             @Html.TextBox("EmployeeId","", new {@class="form-search search-query input-small", placeholder="Employee ID" })  &nbsp &nbsp @Html.TextBox("UserName","", new { @class="form-search search-query input-small", placeholder="User Name" }) &nbsp &nbsp<button type="submit" class="btn btn-success">Search</button>  
+                        </form>
+                    </div>
+                 } 
+            </div>
+            <br/><br/>	
+
+            <table class="table table-striped table-hover table-bordered bootstrap-datatable datatable">
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Department ID</th>
+                    <th>User Name</th>
+                    <th>Password</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Tel</th>
+                    <th>RegTime</th>
+                    <th>LastLoginTime</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.EmployeeId</td>
+                        <td>@item.DepartmentId</td>
+                        <td>@item.UserName</td>
+                        <td>@item.Password</td>
+                        <td>@item.Gender</td>
+                        <td>@item.Email</td>
+                        <td>@item.Tel</td>
+                        <td>@item.RegTime</td>
+                        <td>@item.LastLoginTime</td>
+                        <td>
+                            <div class="btn-group">
+                                <button class='btn dropdown-toggle' data-toggle="dropdown">Action <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Edit", "Edit", new { id = item.Id })</li>
+                                    <li>@Html.ActionLink("Details", "Details", new { id = item.Id })</li>
+                                    <li>@Html.ActionLink("Delete", "Delete", new { id = item.Id })<li>
+                                    <li>@Html.ActionLink("View Trainees", "adminViewTrainee", "Admin", new { trainerID = item.EmployeeId }, new { })
+                                </ul>
+                            </div>
+               
+                        </td>
+                    </tr>
+                }
+            </table>
+            <div class="container">
+                @Html.PagedListPager((PagedList.IPagedList)Model, page => Url.Action("Index", new { page = page }), new PagedListRenderOptions{ LinkToPreviousPageFormat = "Prev", LinkToNextPageFormat = "Next" })
+            </div>
+        </div>
+    </div>
+</div>
+

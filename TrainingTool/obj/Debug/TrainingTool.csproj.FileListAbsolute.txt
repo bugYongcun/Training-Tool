@@ -1,0 +1,730 @@
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.csprojResolveAssemblyReference.cache
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\TrainingTool.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\TrainingTool.pdb
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\Antlr3.Runtime.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.Core.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\EntityFramework.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\Microsoft.Web.Infrastructure.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\Newtonsoft.Json.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Net.Http.Formatting.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Helpers.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Http.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Http.WebHost.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Mvc.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Optimization.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Razor.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.Deployment.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.Razor.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\WebGrease.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\WebMatrix.Data.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\WebMatrix.WebData.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\EntityFramework.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\Newtonsoft.Json.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Net.Http.Formatting.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Helpers.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Http.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Http.WebHost.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Mvc.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.Razor.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.Deployment.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.Razor.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\WebMatrix.Data.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\WebMatrix.WebData.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.Core.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\EntityFramework.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Http.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Optimization.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\WebMatrix.Data.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\WebMatrix.WebData.resources.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.pdb
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.initial.resources
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.csproj.GenerateResource.Cache
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.upDB.resources
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\Calabonga.Mvc.PagedListExt.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\PagedList.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\PagedList.Mvc.dll
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\PagedList.xml
+F:\Users\slt\documents\visual studio 2012\Projects\tool\TrainingTool\bin\PagedList.Mvc.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\TrainingTool.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\TrainingTool.pdb
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\Antlr3.Runtime.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\Calabonga.Mvc.PagedListExt.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.Core.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\EntityFramework.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\Microsoft.Web.Infrastructure.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\Newtonsoft.Json.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\PagedList.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\PagedList.Mvc.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Net.Http.Formatting.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Helpers.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Http.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Http.WebHost.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Mvc.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Optimization.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Razor.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.Deployment.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.Razor.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\WebGrease.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\WebMatrix.Data.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\WebMatrix.WebData.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\PagedList.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\PagedList.Mvc.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\EntityFramework.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\Newtonsoft.Json.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Net.Http.Formatting.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Helpers.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Http.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Http.WebHost.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Mvc.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.Razor.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.Deployment.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\System.Web.WebPages.Razor.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\WebMatrix.Data.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\WebMatrix.WebData.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.Core.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\EntityFramework.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Http.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Optimization.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\WebMatrix.Data.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\zh-Hans\WebMatrix.WebData.resources.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.csprojResolveAssemblyReference.cache
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.pdb
+K:\tool\TrainingTool\bin\TrainingTool.dll
+K:\tool\TrainingTool\bin\TrainingTool.pdb
+K:\tool\TrainingTool\bin\Antlr3.Runtime.dll
+K:\tool\TrainingTool\bin\Calabonga.Mvc.PagedListExt.dll
+K:\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.dll
+K:\tool\TrainingTool\bin\DotNetOpenAuth.Core.dll
+K:\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.dll
+K:\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.dll
+K:\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.dll
+K:\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+K:\tool\TrainingTool\bin\EntityFramework.dll
+K:\tool\TrainingTool\bin\Microsoft.Web.Infrastructure.dll
+K:\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.dll
+K:\tool\TrainingTool\bin\Newtonsoft.Json.dll
+K:\tool\TrainingTool\bin\PagedList.dll
+K:\tool\TrainingTool\bin\PagedList.Mvc.dll
+K:\tool\TrainingTool\bin\System.Net.Http.Formatting.dll
+K:\tool\TrainingTool\bin\System.Web.Helpers.dll
+K:\tool\TrainingTool\bin\System.Web.Http.dll
+K:\tool\TrainingTool\bin\System.Web.Http.WebHost.dll
+K:\tool\TrainingTool\bin\System.Web.Mvc.dll
+K:\tool\TrainingTool\bin\System.Web.Optimization.dll
+K:\tool\TrainingTool\bin\System.Web.Razor.dll
+K:\tool\TrainingTool\bin\System.Web.WebPages.Deployment.dll
+K:\tool\TrainingTool\bin\System.Web.WebPages.dll
+K:\tool\TrainingTool\bin\System.Web.WebPages.Razor.dll
+K:\tool\TrainingTool\bin\WebGrease.dll
+K:\tool\TrainingTool\bin\WebMatrix.Data.dll
+K:\tool\TrainingTool\bin\WebMatrix.WebData.dll
+K:\tool\TrainingTool\bin\PagedList.xml
+K:\tool\TrainingTool\bin\PagedList.Mvc.xml
+K:\tool\TrainingTool\bin\EntityFramework.xml
+K:\tool\TrainingTool\bin\Newtonsoft.Json.xml
+K:\tool\TrainingTool\bin\System.Net.Http.Formatting.xml
+K:\tool\TrainingTool\bin\System.Web.Helpers.xml
+K:\tool\TrainingTool\bin\System.Web.Http.xml
+K:\tool\TrainingTool\bin\System.Web.Http.WebHost.xml
+K:\tool\TrainingTool\bin\System.Web.Mvc.xml
+K:\tool\TrainingTool\bin\System.Web.Razor.xml
+K:\tool\TrainingTool\bin\System.Web.WebPages.xml
+K:\tool\TrainingTool\bin\System.Web.WebPages.Deployment.xml
+K:\tool\TrainingTool\bin\System.Web.WebPages.Razor.xml
+K:\tool\TrainingTool\bin\WebMatrix.Data.xml
+K:\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.xml
+K:\tool\TrainingTool\bin\WebMatrix.WebData.xml
+K:\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.xml
+K:\tool\TrainingTool\bin\DotNetOpenAuth.Core.xml
+K:\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.xml
+K:\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.xml
+K:\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.xml
+K:\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+K:\tool\TrainingTool\bin\zh-Hans\EntityFramework.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\System.Web.Helpers.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\System.Web.Http.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\System.Web.Mvc.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\System.Web.Optimization.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\System.Web.Razor.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\WebMatrix.Data.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
+K:\tool\TrainingTool\bin\zh-Hans\WebMatrix.WebData.resources.dll
+K:\tool\TrainingTool\obj\Debug\TrainingTool.csprojResolveAssemblyReference.cache
+K:\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.Initial.resources
+K:\tool\TrainingTool\obj\Debug\TrainingTool.csproj.GenerateResource.Cache
+K:\tool\TrainingTool\obj\Debug\TrainingTool.dll
+K:\tool\TrainingTool\obj\Debug\TrainingTool.pdb
+K:\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.up710.resources
+K:\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.upContext.resources
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\TrainingTool.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\TrainingTool.pdb
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\Antlr3.Runtime.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\Calabonga.Mvc.PagedListExt.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.Core.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\EntityFramework.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\Microsoft.Web.Infrastructure.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\Newtonsoft.Json.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\PagedList.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\PagedList.Mvc.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Net.Http.Formatting.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Helpers.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Http.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Http.WebHost.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Mvc.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Optimization.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Razor.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.WebPages.Deployment.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.WebPages.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.WebPages.Razor.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\WebGrease.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\WebMatrix.Data.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\WebMatrix.WebData.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\PagedList.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\PagedList.Mvc.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\EntityFramework.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\Newtonsoft.Json.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Net.Http.Formatting.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Helpers.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Http.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Http.WebHost.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Mvc.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.Razor.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.WebPages.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.WebPages.Deployment.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\System.Web.WebPages.Razor.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\WebMatrix.Data.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\WebMatrix.WebData.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.Core.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\EntityFramework.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\System.Web.Http.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\System.Web.Optimization.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\WebMatrix.Data.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\bin\zh-Hans\WebMatrix.WebData.resources.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\obj\Debug\TrainingTool.csprojResolveAssemblyReference.cache
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.Initial.resources
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.up710.resources
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.upContext.resources
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\obj\Debug\TrainingTool.csproj.GenerateResource.Cache
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\obj\Debug\TrainingTool.dll
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\obj\Debug\TrainingTool.pdb
+F:\Users\slt\Documents\Visual Studio 2012\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.success.resources
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\TrainingTool.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\TrainingTool.pdb
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\Antlr3.Runtime.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\Calabonga.Mvc.PagedListExt.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.Core.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\EntityFramework.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\Newtonsoft.Json.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\PagedList.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\PagedList.Mvc.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Net.Http.Formatting.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Helpers.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Http.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Http.WebHost.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Mvc.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Optimization.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Razor.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.Deployment.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.Razor.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\WebGrease.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\WebMatrix.Data.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\WebMatrix.WebData.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\PagedList.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\PagedList.Mvc.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\EntityFramework.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\Newtonsoft.Json.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Net.Http.Formatting.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Helpers.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Http.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Http.WebHost.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Mvc.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Razor.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.Deployment.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.Razor.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\WebMatrix.Data.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\WebMatrix.WebData.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.Core.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Http.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\WebMatrix.Data.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\WebMatrix.WebData.resources.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.csprojResolveAssemblyReference.cache
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.Initial.resources
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.up710.resources
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.upContext.resources
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.success.resources
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.csproj.GenerateResource.Cache
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.dll
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.pdb
+C:\Users\emma\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.up711.resources
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\TrainingTool.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\TrainingTool.pdb
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\Antlr3.Runtime.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\Calabonga.Mvc.PagedListExt.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.Core.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\EntityFramework.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\Microsoft.Web.Infrastructure.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\Newtonsoft.Json.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\PagedList.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\PagedList.Mvc.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Net.Http.Formatting.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Helpers.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Http.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Http.WebHost.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Mvc.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Optimization.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Razor.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.Deployment.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.Razor.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\WebGrease.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\WebMatrix.Data.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\WebMatrix.WebData.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\PagedList.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\PagedList.Mvc.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\EntityFramework.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\Newtonsoft.Json.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Net.Http.Formatting.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Helpers.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Http.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Http.WebHost.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Mvc.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.Razor.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.Deployment.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\System.Web.WebPages.Razor.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\WebMatrix.Data.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\WebMatrix.WebData.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.Core.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\EntityFramework.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Http.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Optimization.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\WebMatrix.Data.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\bin\zh-Hans\WebMatrix.WebData.resources.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.csprojResolveAssemblyReference.cache
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.Initial.resources
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.up710.resources
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.upContext.resources
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.success.resources
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.up711.resources
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.csproj.GenerateResource.Cache
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.dll
+F:\Users\slt\Desktop\7.11-1\tool\TrainingTool\obj\Debug\TrainingTool.pdb
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\TrainingTool.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\TrainingTool.pdb
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\Antlr3.Runtime.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\Calabonga.Mvc.PagedListExt.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.Core.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\EntityFramework.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\Newtonsoft.Json.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\PagedList.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\PagedList.Mvc.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Net.Http.Formatting.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Helpers.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Http.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Http.WebHost.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Mvc.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Optimization.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Razor.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Deployment.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Razor.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\WebGrease.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\WebMatrix.Data.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\WebMatrix.WebData.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\PagedList.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\PagedList.Mvc.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\EntityFramework.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\Newtonsoft.Json.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Net.Http.Formatting.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Helpers.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Http.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Http.WebHost.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Mvc.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.Razor.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Deployment.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Razor.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\WebMatrix.Data.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\WebMatrix.WebData.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.Core.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Http.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\WebMatrix.Data.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\bin\zh-Hans\WebMatrix.WebData.resources.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.csprojResolveAssemblyReference.cache
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.Initial.resources
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.up710.resources
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.upContext.resources
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.success.resources
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.up711.resources
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.csproj.GenerateResource.Cache
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.dll
+C:\Users\emma\Desktop\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.pdb
+H:\7.11-3\tool\TrainingTool\bin\TrainingTool.dll
+H:\7.11-3\tool\TrainingTool\bin\TrainingTool.pdb
+H:\7.11-3\tool\TrainingTool\bin\Antlr3.Runtime.dll
+H:\7.11-3\tool\TrainingTool\bin\Calabonga.Mvc.PagedListExt.dll
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.dll
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.Core.dll
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.dll
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.dll
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.dll
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+H:\7.11-3\tool\TrainingTool\bin\EntityFramework.dll
+H:\7.11-3\tool\TrainingTool\bin\Microsoft.Web.Infrastructure.dll
+H:\7.11-3\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.dll
+H:\7.11-3\tool\TrainingTool\bin\Newtonsoft.Json.dll
+H:\7.11-3\tool\TrainingTool\bin\PagedList.dll
+H:\7.11-3\tool\TrainingTool\bin\PagedList.Mvc.dll
+H:\7.11-3\tool\TrainingTool\bin\System.Net.Http.Formatting.dll
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Helpers.dll
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Http.dll
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Http.WebHost.dll
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Mvc.dll
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Optimization.dll
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Razor.dll
+H:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Deployment.dll
+H:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.dll
+H:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Razor.dll
+H:\7.11-3\tool\TrainingTool\bin\WebGrease.dll
+H:\7.11-3\tool\TrainingTool\bin\WebMatrix.Data.dll
+H:\7.11-3\tool\TrainingTool\bin\WebMatrix.WebData.dll
+H:\7.11-3\tool\TrainingTool\bin\PagedList.xml
+H:\7.11-3\tool\TrainingTool\bin\PagedList.Mvc.xml
+H:\7.11-3\tool\TrainingTool\bin\EntityFramework.xml
+H:\7.11-3\tool\TrainingTool\bin\Newtonsoft.Json.xml
+H:\7.11-3\tool\TrainingTool\bin\System.Net.Http.Formatting.xml
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Helpers.xml
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Http.xml
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Http.WebHost.xml
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Mvc.xml
+H:\7.11-3\tool\TrainingTool\bin\System.Web.Razor.xml
+H:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.xml
+H:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Deployment.xml
+H:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Razor.xml
+H:\7.11-3\tool\TrainingTool\bin\WebMatrix.Data.xml
+H:\7.11-3\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.xml
+H:\7.11-3\tool\TrainingTool\bin\WebMatrix.WebData.xml
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.xml
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.Core.xml
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.xml
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.xml
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.xml
+H:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\EntityFramework.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Helpers.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Http.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Mvc.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Optimization.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Razor.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\WebMatrix.Data.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
+H:\7.11-3\tool\TrainingTool\bin\zh-Hans\WebMatrix.WebData.resources.dll
+H:\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.csprojResolveAssemblyReference.cache
+H:\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.dll
+H:\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.pdb
+H:\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.Initial.resources
+H:\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.csproj.GenerateResource.Cache
+K:\7.11-3\tool\TrainingTool\bin\TrainingTool.dll
+K:\7.11-3\tool\TrainingTool\bin\TrainingTool.pdb
+K:\7.11-3\tool\TrainingTool\bin\Antlr3.Runtime.dll
+K:\7.11-3\tool\TrainingTool\bin\Calabonga.Mvc.PagedListExt.dll
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.dll
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.Core.dll
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.dll
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.dll
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.dll
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+K:\7.11-3\tool\TrainingTool\bin\EntityFramework.dll
+K:\7.11-3\tool\TrainingTool\bin\Microsoft.Web.Infrastructure.dll
+K:\7.11-3\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.dll
+K:\7.11-3\tool\TrainingTool\bin\Newtonsoft.Json.dll
+K:\7.11-3\tool\TrainingTool\bin\PagedList.dll
+K:\7.11-3\tool\TrainingTool\bin\PagedList.Mvc.dll
+K:\7.11-3\tool\TrainingTool\bin\System.Net.Http.Formatting.dll
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Helpers.dll
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Http.dll
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Http.WebHost.dll
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Mvc.dll
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Optimization.dll
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Razor.dll
+K:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Deployment.dll
+K:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.dll
+K:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Razor.dll
+K:\7.11-3\tool\TrainingTool\bin\WebGrease.dll
+K:\7.11-3\tool\TrainingTool\bin\WebMatrix.Data.dll
+K:\7.11-3\tool\TrainingTool\bin\WebMatrix.WebData.dll
+K:\7.11-3\tool\TrainingTool\bin\PagedList.xml
+K:\7.11-3\tool\TrainingTool\bin\PagedList.Mvc.xml
+K:\7.11-3\tool\TrainingTool\bin\EntityFramework.xml
+K:\7.11-3\tool\TrainingTool\bin\Newtonsoft.Json.xml
+K:\7.11-3\tool\TrainingTool\bin\System.Net.Http.Formatting.xml
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Helpers.xml
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Http.xml
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Http.WebHost.xml
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Mvc.xml
+K:\7.11-3\tool\TrainingTool\bin\System.Web.Razor.xml
+K:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.xml
+K:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Deployment.xml
+K:\7.11-3\tool\TrainingTool\bin\System.Web.WebPages.Razor.xml
+K:\7.11-3\tool\TrainingTool\bin\WebMatrix.Data.xml
+K:\7.11-3\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.xml
+K:\7.11-3\tool\TrainingTool\bin\WebMatrix.WebData.xml
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.xml
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.Core.xml
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.xml
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.xml
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.xml
+K:\7.11-3\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\EntityFramework.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Helpers.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Http.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Mvc.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Optimization.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.Razor.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\WebMatrix.Data.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
+K:\7.11-3\tool\TrainingTool\bin\zh-Hans\WebMatrix.WebData.resources.dll
+K:\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.csprojResolveAssemblyReference.cache
+K:\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.Initial.resources
+K:\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.csproj.GenerateResource.Cache
+K:\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.dll
+K:\7.11-3\tool\TrainingTool\obj\Debug\TrainingTool.pdb
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\ValueWebSocket.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\ValueHelper.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\Microsoft.Office.Interop.Excel.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\ValueWebSocket.pdb
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\ValueHelper.pdb
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\bin\Microsoft.WebSockets.dll
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.Initial.resources
+F:\Users\王永淳\Documents\Visual Studio 2012\Projects\tool\TrainingTool\obj\Debug\TrainingTool.csproj.GenerateResource.Cache
+F:\Users\slt\Desktop\tool\TrainingTool\bin\TrainingTool.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\TrainingTool.pdb
+F:\Users\slt\Desktop\tool\TrainingTool\bin\Antlr3.Runtime.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\Calabonga.Mvc.PagedListExt.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.Core.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\EntityFramework.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\Microsoft.Web.Infrastructure.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\Microsoft.WebSockets.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\Newtonsoft.Json.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\PagedList.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\PagedList.Mvc.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Net.Http.Formatting.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Helpers.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Http.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Http.WebHost.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Mvc.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Optimization.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Razor.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.WebPages.Deployment.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.WebPages.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.WebPages.Razor.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\ValueWebSocket.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\WebGrease.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\WebMatrix.Data.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\WebMatrix.WebData.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\ValueHelper.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\Microsoft.Office.Interop.Excel.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\ValueWebSocket.pdb
+F:\Users\slt\Desktop\tool\TrainingTool\bin\PagedList.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\PagedList.Mvc.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\EntityFramework.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\Newtonsoft.Json.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Net.Http.Formatting.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Helpers.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Http.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Http.WebHost.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Mvc.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.Razor.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.WebPages.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.WebPages.Deployment.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\System.Web.WebPages.Razor.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\WebMatrix.Data.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\WebMatrix.WebData.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.AspNet.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.Core.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.OAuth.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Users\slt\Desktop\tool\TrainingTool\bin\ValueHelper.pdb
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\EntityFramework.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\System.Web.Http.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\System.Web.Optimization.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\WebMatrix.Data.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\bin\zh-Hans\WebMatrix.WebData.resources.dll
+F:\Users\slt\Desktop\tool\TrainingTool\obj\Debug\TrainingTool.csprojResolveAssemblyReference.cache
+F:\Users\slt\Desktop\tool\TrainingTool\obj\Debug\TrainingTool.Migrations.Initial.resources
+F:\Users\slt\Desktop\tool\TrainingTool\obj\Debug\TrainingTool.csproj.GenerateResource.Cache
+F:\Users\slt\Desktop\tool\TrainingTool\obj\Debug\TrainingTool.dll
+F:\Users\slt\Desktop\tool\TrainingTool\obj\Debug\TrainingTool.pdb

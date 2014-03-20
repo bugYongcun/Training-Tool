@@ -1,0 +1,72 @@
+﻿@model TrainingTool.Models.AdminLogin
+
+@{
+    ViewBag.Title = "Admin Login Page";
+}
+
+<style type="text/css">
+    body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+    }
+
+    .form-signin {
+    max-width: 300px;
+    padding: 19px 29px 29px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    }
+    .form-signin .form-signin-heading,
+    .form-signin .checkbox {
+    margin-bottom: 10px;
+    }
+    .form-signin input[type="text"],
+    .form-signin input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+    }
+
+</style>
+
+<div class="container">
+    @using (Html.BeginForm("Login", "Admin", FormMethod.Post, new { @class = "form-signin" }))
+    { 
+        @Html.ValidationSummary(true) 
+        <h2 class="form-signin-heading">Please Log In</h2>
+        <div class="control-group">
+            @Html.TextBoxFor(model => model.EmployeeId, new { @class = "input-block-level", placeholder = "Employee ID" }) 
+            @Html.ValidationMessageFor(model => model.EmployeeId) 
+        </div>
+        <div class="control-group">
+            @Html.PasswordFor(model => model.Password, new { @class = "input-block-level", placeholder = "Password" }) 
+            @Html.ValidationMessageFor(model => model.Password) 
+        </div>
+        <div class="control-group">
+            @Html.TextBoxFor(model => model.VerificationCode, new { @class = "input-block-level", placeholder = "Verification Code" })
+            @Html.ValidationMessageFor(model => model.VerificationCode)  
+            <img style="margin-left: 200px" id="verificationcode" alt="" src="@Url.Action("VerificationCode", "User")" /> 
+        </div> 
+        <button class="btn btn-large btn-primary" type="submit">Login</button>
+    }
+</div> <!-- /container -->
+
+<script type="text/javascript"> 
+    $("#verificationcode").click(function () {
+        $("#verificationcode").attr("src", "/User/VerificationCode?" + new Date()); 
+    }) 
+
+</script> 
+@section Scripts { 
+    @Scripts.Render("~/bundles/jqueryval") 
+}
+

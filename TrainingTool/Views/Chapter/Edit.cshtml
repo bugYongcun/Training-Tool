@@ -1,0 +1,156 @@
+﻿
+@model TrainingTool.Models.Chapter
+
+<link href="Content/bootstrap.min.css" rel="stylesheet">
+<link href="Content/video-default.css" rel="stylesheet">
+<script type="text/javascript" src="Scripts/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="Scripts/js/jquery.video-ui.js"></script>
+<link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Edit";
+}
+@{
+HttpCookie _cookie = Request.Cookies["User"];
+  string nowUserId = _cookie["EmployeeId"];
+  int hasTrainee = (int)ViewData["hasTrainee"];
+}  
+    @* @Html.ActionLink("Return to Index", "teachersIndex", "Course",new{ userId= nowUserId },new{})
+        </div>*@
+<div class="navbar">
+
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                    <li>@Html.ActionLink("Index", "Index", "Course",new { lastTime=DateTime.Now, userId = nowUserId  }, new { })</li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Study Management", "studentIndex", "Course", new { lastTime=DateTime.Now, userId = nowUserId }, new { })</li>
+                    <li>@Html.ActionLink("Course Management", "teachersIndex", "Course", new { lastTime=DateTime.Now, userId = nowUserId  }, new { })</li>
+                     @{
+                        if(hasTrainee==1)
+                        {
+                            <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                        }
+                    }
+                </ul>
+            </div>
+    </div>
+<div class="row-fluid">
+        <div class="span1"></div>
+        <div class="span6" align="middle">
+            <div class="well">
+                @{
+                    string courseName = ViewData["courseName"] as string;
+                }
+            <fieldset>
+                <legend>@Html.DisplayFor(model => model.Name)</legend>
+                <div class="display-field">
+                    <iframe src="~/Courses/@Model.contentFile" width="600" height="720" scrolling="yes" name="content"></iframe>
+                </div>
+            </fieldset>
+            </div>
+            @{
+                string lastChapter = ViewData["lastChapter"] as string;
+                string followingChapter = ViewData["followingChapter"] as string;
+                int lastChapterId = (int)ViewData["lastChapterId"];
+                int followingChapterId = (int)ViewData["followingChapterId"];
+             }
+            
+            <a href="#myModal" role="button" class="btn" data-toggle="modal">Modify content</a>
+        </div>
+        <div class="span4">
+            <div id="demo"></div>
+            <div class="display-field">
+                <iframe src="~/Courses/@Model.videoFile" width="450" height="320" scrolling="yes" name="content"></iframe>
+            </div>
+        </div>
+        <div class="span1"></div>
+    </div>
+<ul class="pager">
+                <li>
+                @if (lastChapter != "")
+                {
+                     @Html.ActionLink("Last Chapter", "Edit", new { id = lastChapterId }) }            
+                </li>
+                <li >
+                    @Html.ActionLink("Return to Course Page", "Edit", "Course", new { id = Model.courseID }, new { })
+                </li>
+                <li>
+                @if (followingChapter != "")
+                {
+                    @Html.ActionLink("Next Chapter", "Edit", new { id = followingChapterId }) 
+                    
+                }
+                </li>
+            </ul>
+    <script>
+        $('#demo1').videoUI({
+        });
+    </script>
+
+<style type="text/css">
+#demo{
+            width:450px;                /*设置div宽度为500像素*/
+            height:280px;              /*设置div高度为200像素*/
+            background:#fff;      /*设置div背景色为黑色*/
+            margin:0 auto;            /*设置div居中显示*/
+            }
+</style>
+@*<div class="span3"></div>
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Rate it!</h3>
+    </div>
+     @using (Html.BeginForm("Edit", "Chapter",new{id=Model.ID,method="post"}, FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+        <div class="modal-body">
+            <div class="editor-label">
+                        Upload PDF Resource
+                    </div>
+                    <div class="editor-field">
+                    <div class="file-box">
+                        <input type="file" name="newcontentfile" />  
+                     
+                    </div>
+    </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary" type ="submit">Submit</button>
+        </div>
+     }
+</div>
+
+<div class="span6">
+<fieldset>
+    <legend>Chapter</legend>
+    @{
+        string courseName = ViewData["courseName"] as string;
+    }
+    <div class="display-field">
+         @Html.ActionLink(courseName, "Edit","Course",new{id=Model.courseID},new{})
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.contentFile)
+    </div>
+    <div class="display-field">
+       <iframe src="~/Courses/@Model.contentFile" width="600" height="600" scrolling="yes" name="content"></iframe>
+    <a href="#myModal" role="button" class="btn" data-toggle="modal">Modify content</a>
+    </div>
+</fieldset>
+</div>
+<div class="span3"></div>
+<p>
+   @* @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")*@
+@*</p>*@
+

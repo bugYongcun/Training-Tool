@@ -1,0 +1,96 @@
+﻿@model IEnumerable<TrainingTool.Models.Chapter>
+@{
+    TrainingTool.Repository.TrainingToolContext db=new TrainingTool.Repository.TrainingToolContext();
+    string trainer = ViewData["trainer"] as string;
+    string trainee = ViewData["trainee"] as string;
+    int courseID = (int)ViewData["course"];
+    int learned = (int)ViewData["progress"];
+}
+<link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+<div class="navbar">
+            @{
+                HttpCookie _cookie = Request.Cookies["User"];
+                string nowUserId = _cookie["EmployeeId"];
+
+                List<TrainingTool.Models.taskRecord> records = db.taskRecords.Where(r => r.courseID == courseID && r.userID == trainee).ToList();
+                List<int> chapter=new List<int>();
+                foreach(var t in records)
+                {
+                    chapter.Add(t.readChapter);
+                }
+            }
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                    <li>@Html.ActionLink("Index", "Index", "Course", new { lastTime = DateTime.Now, userId = nowUserId }, new { })</li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Study Management", "studentIndex", "Course", new { lastTime = DateTime.Now, userId = nowUserId }, new { })</li>
+                    <li>@Html.ActionLink("Course Management", "teachersIndex", "Course", new { lastTime = DateTime.Now, userId = nowUserId }, new { })</li>
+               <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                     </ul>
+            </div>
+    </div>
+
+
+<div class="row-fluid">
+    <div class="span2"></div>
+    <div class ="span8">
+    <h2>View Task</h2>
+@{
+    if(learned==1)
+    {
+<table class="table table-hover table-striped">
+    <tr class="info">
+       <td>
+            <strong>Chapter</strong>
+        </td>
+        <td>
+            <strong>Chapter Name</strong>
+        </td>
+        <td>
+            <strong>Learning Time</strong>
+        </td>
+     
+    </tr>
+
+@foreach (var item in Model) {
+  // TrainingTool.Models.Course course= db.Courses.Find(item.courseID);
+  // TrainingTool.Models.User author = db.User.FirstOrDefault(u => u.EmployeeId == course.TeacherID);
+  
+    <tr>
+        <td>
+            @Html.DisplayFor(m=>item.chapterID)
+        </td>
+        <td>
+            @Html.DisplayFor(m=>item.Name)
+        </td>
+        @{
+           if( chapter.Contains(item.chapterID))
+           {
+               int learningTime = (int)db.taskRecords.FirstOrDefault(r => r.courseID == courseID && r.userID == trainee && r.readChapter == item.chapterID).learnMinutes;
+               string time = learningTime.ToString();
+        <td>
+           @time
+        </td>
+        }
+               else{
+               <td>
+           0
+        </td>
+               }
+        }
+       
+    </tr>
+}
+
+</table>
+}
+    else{
+       <p> No Learning Record in This Course</p>
+    }
+}
+   </div>
+    <div class="span2"></div>
+</div>
+ <button class="btn  btn-primary" type="button" onclick="location.href='@Url.Action("ViewTask", "trainerToTrainee",new {trainerID=trainer,traineeID=trainee})'">Go Back</button>

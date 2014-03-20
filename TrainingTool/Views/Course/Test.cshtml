@@ -1,0 +1,554 @@
+﻿@model TrainingTool.Models.userAnswer
+<link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+@{
+  
+    ViewBag.Title = "Test";
+   // List<TrainingTool.Models.Test> tests = new List<TrainingTool.Models.Test>();
+   // tests.Add(new TrainingTool.Models.Test());
+
+    int hasTrainee = (int)ViewData["hasTrainee"];
+   //S TrainingTool.Models.testList test = ViewData["test"] as TrainingTool.Models.testList;
+    TrainingTool.Models.Test t1 = ViewData["test1"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t2 = ViewData["test2"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t3 = ViewData["test3"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t4 = ViewData["test4"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t5 = ViewData["test5"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t6 = ViewData["test6"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t7 = ViewData["test7"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t8 = ViewData["test8"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t9 = ViewData["test9"] as TrainingTool.Models.Test;
+    TrainingTool.Models.Test t10 = ViewData["test10"] as TrainingTool.Models.Test;
+    string nowType= ViewData["type"] as string;
+   // HttpCookie _cookie = Request.Cookies["User"];
+   // string userId = _cookie["EmployeeId"];
+}
+<style type="text/css">
+.editor-label {
+  float: left;
+  width: 30px;   
+  text-align: right; 
+}
+
+.editor-field {
+  width: 80px; 
+}
+</style>
+<div class="navbar">
+            @{
+                HttpCookie _cookie = Request.Cookies["User"];
+                string nowUserId = _cookie["EmployeeId"];
+            }
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                    <li>@Html.ActionLink("Index", "Index", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Study Management", "studentIndex", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li>@Html.ActionLink("Course Management", "teachersIndex", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                @{
+                        if(hasTrainee==1)
+                        {
+                            <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                        }
+                    }
+                     </ul>
+            </div>
+    </div>
+
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8" align="left">  
+@using(Html.BeginForm("Test","Course",new{id=Model.courseId,userID=Model.userId},FormMethod.Post,new{}))
+{
+    @Html.ValidationSummary(true)
+     
+        // int count=1;
+    <fieldset>
+        <legend>Test</legend>
+        <div>
+            <div class="row-fluid ">
+            <div class="span1"></div>
+            <div class="span10 well">
+            <div class="editor-field">
+                <label>1. @t1.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t1Answer,"A")
+                        <label>A. @t1.chooseA</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t1Answer,"B")
+                        <label>B. @t1.chooseB</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t1Answer,"C")
+                        <label>C. @t1.chooseC</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t1Answer,"D")
+                        <label>D. @t1.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            @{
+                    
+                    if (nowType == "rightAnswer")
+                    {
+                        <div class="editor-field">
+                            <label>Right Answer: @t1.answer</label>
+                        </div>
+                    }
+            }
+            </div>
+            <div class="span1"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-fluid ">
+            <div class="span1"></div>
+            <div class="span10 well">
+            <div class="editor-field">
+                <label>2. @t2.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t2Answer,"A")
+                        <label>A. @t2.chooseA</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t2Answer,"B")
+                        <label>B. @t2.chooseB</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t2Answer,"C")
+                        <label>C. @t2.chooseC</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t2Answer,"D")
+                        <label>D. @t2.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            @{
+                    
+                    if (nowType == "rightAnswer")
+                    {
+                        <div class="editor-field">
+                            <label>Right Answer: @t2.answer</label>
+                        </div>
+                    }
+            }
+            </div>
+            <div class="span1"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-fluid ">
+            <div class="span1"></div>
+            <div class="span10 well">
+            <div class="editor-field">
+                <label>3. @t3.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t3Answer,"A")
+                        <label>A. @t3.chooseA</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t3Answer,"B")
+                        <label>B. @t3.chooseB</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t3Answer,"C")
+                        <label>C. @t3.chooseC</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t3Answer,"D")
+                        <label>D. @t3.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            @{
+                    
+                    if (nowType == "rightAnswer")
+                    {
+                        <div class="editor-field">
+                            <label>Right Answer: @t3.answer</label>
+                        </div>
+                    }
+            }
+            </div>
+            <div class="span1"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-fluid ">
+            <div class="span1"></div>
+            <div class="span10 well">
+            <div class="editor-field">
+                <label>4. @t4.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t4Answer,"A")
+                        <label>A. @t4.chooseA</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t4Answer,"B")
+                        <label>B. @t4.chooseB</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t4Answer,"C")
+                        <label>C. @t4.chooseC</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t4Answer,"D")
+                        <label>D. @t4.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            @{
+                    
+                    if (nowType == "rightAnswer")
+                    {
+                        <div class="editor-field">
+                            <label>Right Answer: @t4.answer</label>
+                        </div>
+                    }
+            }
+            </div>
+            <div class="span1"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-fluid ">
+            <div class="span1"></div>
+            <div class="span10 well">
+            <div class="editor-field">
+                <label>5. @t5.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t5Answer,"A")
+                        <label>A. @t5.chooseA</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t5Answer,"B")
+                        <label>B. @t5.chooseB</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t5Answer,"C")
+                        <label>C. @t5.chooseC</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t5Answer,"D")
+                        <label>D. @t5.chooseD</label>
+                    </div>
+                </div> 
+            </div>
+            @{
+                    
+                    if (nowType == "rightAnswer")
+                    {
+                        <div class="editor-field">
+                            <label>Right Answer: @t5.answer</label>
+                        </div>
+                    }
+            }
+            </div>
+            <div class="span1"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-fluid ">
+            <div class="span1"></div>
+            <div class="span10 well">
+            <div class="editor-field">
+                <label>6. @t6.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t6Answer,"A")
+                        <label>A. @t6.chooseA</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t6Answer,"B")
+                        <label>B. @t6.chooseB</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t6Answer,"C")
+                        <label>C. @t6.chooseC</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t6Answer,"D")
+                        <label>D. @t6.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            @{
+                    
+                    if (nowType == "rightAnswer")
+                    {
+                        <div class="editor-field">
+                            <label>Right Answer: @t6.answer</label>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="span1"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-fluid ">
+            <div class="span1"></div>
+            <div class="span10 well">
+            <div class="editor-field">
+                <label>7. @t7.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t7Answer,"A")
+                        <label>A. @t7.chooseA</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t7Answer,"B")
+                        <label>B. @t7.chooseB</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t7Answer,"C")
+                        <label>C. @t7.chooseC</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t7Answer,"D")
+                        <label>D. @t7.chooseD</label>
+                    </div>
+                </div> 
+            </div>
+            @{
+                    
+                    if (nowType == "rightAnswer")
+                    {
+                        <div class="editor-field">
+                            <label>Right Answer: @t7.answer</label>
+                        </div>
+                    }
+            }
+            </div>
+            <div class="span1"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-fluid ">
+            <div class="span1"></div>
+            <div class="span10 well">
+            <div class="editor-field">
+                <label>8. @t8.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t8Answer,"A")
+                        <label>A. @t8.chooseA</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t8Answer,"B")
+                        <label>B. @t8.chooseB</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t8Answer,"C")
+                        <label>C. @t8.chooseC</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t8Answer,"D")
+                        <label>D. @t8.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            @{
+                    
+                    if (nowType == "rightAnswer")
+                    {
+                        <div class="editor-field">
+                            <label>Right Answer: @t8.answer</label>
+                        </div>
+                    }
+            }
+            </div>
+            <div class="span1"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-fluid ">
+            <div class="span1"></div>
+            <div class="span10 well">
+            <div class="editor-field">
+                <label>9. @t9.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t9Answer,"A")
+                        <label>A. @t9.chooseA</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t9Answer,"B")
+                        <label>B. @t9.chooseB</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t9Answer,"C")
+                        <label>C. @t9.chooseC</label>
+                    </div>
+                </div>
+                <div class="span6 ">
+                    <div class="editor-field">
+                        @Html.RadioButtonFor(model => model.t9Answer,"D")
+                        <label>D. @t9.chooseD</label>
+                    </div>
+                </div>
+            </div>
+            @{
+                    
+                    if (nowType == "rightAnswer")
+                    {
+                        <div class="editor-field">
+                            <label>Right Answer: @t9.answer</label>
+                        </div>
+                    }
+            }
+            </div>
+            <div class="span1"></div>
+            </div>
+        </div>
+        
+        <div>
+            <div class="row-fluid ">
+            <div class="span1"></div>
+            <div class="span10 well">
+            <div class="editor-field">
+                <label>10. @t10.content</label>
+            </div>
+            <div class="row-fluid">
+                <div class="span10">
+                    <div class="editor-field">
+                        @Html.TextAreaFor(model => model.t10Answer)
+                    </div>
+                </div>
+                @{
+                    
+                    if (nowType == "rightAnswer")
+                    {
+                        <div class="editor-field">
+                            @Html.Label("Suggest Answer:")
+                            @Html.Label(t10.answer) 
+                        </div>
+                    }
+                }
+            </div>
+            </div>
+            <div class="span1"></div>
+            </div>
+        </div>
+
+        @{if (nowType == "userAnswer")
+          {
+         <p align="middle">
+            <input type="submit" class="btn btn-primary" value="Submit" />
+        </p>
+        }
+        }
+    </fieldset>     
+}
+    </div>
+    <div class="span2"></div>
+    </div>
+  
+       
+       
+

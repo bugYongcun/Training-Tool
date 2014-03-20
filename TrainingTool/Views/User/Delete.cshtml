@@ -1,0 +1,99 @@
+﻿@model TrainingTool.Models.User
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div>
+                <p id="logo">
+                    <p class="semi">Manage User 
+                        <span id="tagline">​add, delete or update the employee ​</span>
+                    </p>     
+                </p>
+                <div class="nav-collapse collapse"/>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <h2>Delete</h2>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <fieldset>
+        <legend>User</legend>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.EmployeeId)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.EmployeeId)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.DepartmentId)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.DepartmentId)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.UserName)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.UserName)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Password)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Password)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Gender)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Gender)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Email)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Tel)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Tel)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.RegTime)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.RegTime)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.LastLoginTime)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.LastLoginTime)
+        </div>
+    </fieldset>
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <p>
+            <button type="submit" class="btn btn-danger">Delete</button> |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    }
+</div>

@@ -1,0 +1,83 @@
+﻿@model  TrainingTool.Controllers.CourseToAssign
+@{
+    string traine=ViewData["trainer"] as string;
+    string trainee = ViewData["trainee"] as string;
+}
+<link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+<div class="navbar">
+            @{
+                HttpCookie _cookie = Request.Cookies["User"];
+                string nowUserId = _cookie["EmployeeId"];
+            }
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                    <li>@Html.ActionLink("Index", "Index", "Course", new { lastTime = DateTime.Now, userId = nowUserId }, new { })</li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Study Management", "studentIndex", "Course", new { lastTime = DateTime.Now, userId = nowUserId }, new { })</li>
+                    <li>@Html.ActionLink("Course Management", "teachersIndex", "Course", new { lastTime = DateTime.Now, userId = nowUserId }, new { })</li>
+                <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                </ul>
+            </div>
+    </div>
+
+
+<div class="row-fluid">
+    <div class="span2"></div>
+    <div class ="span8">
+    <h2>Give Task</h2>
+    @using (Html.BeginForm())
+    {
+ 
+        <table class="table table-hover table-striped">    
+        <tr class="info">
+            <td></td>
+            <td><strong>Course Name</strong></td>
+            <td><strong>Author Name</strong></td>
+            <td><strong>Author's Departure</strong></td>
+            <td><strong>Catagory</strong></td>
+            <td><strong>For Departure</strong></td>
+            <td></td>
+            <td></td>
+        </tr>     
+        @{for (int i = 0; i < Model.coursesList.Count; i++)
+        {
+              <tr>
+                <td>
+                    @Html.CheckBoxFor(m=>Model.coursesList[i].Selected)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(m => Model.coursesList[i].name) 
+                </td>
+                <td>
+                    @Html.DisplayFor(m => Model.coursesList[i].authorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => Model.coursesList[i].authorDepart) 
+                </td>
+                <td>
+                    @Html.DisplayFor(m => Model.coursesList[i].Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => Model.coursesList[i].forDeparts)
+                </td>
+                <td>
+                    @Html.HiddenFor(m => Model.coursesList[i].name)
+                </td>
+                <td>
+                    @Html.HiddenFor(m => Model.coursesList[i].courseID)
+                </td> 
+            </tr>
+        }
+        }
+        </table>
+        <p align="middle">
+            <input type="submit" id="btnPostValue" class="btn  btn-primary" value="Confirm" />
+             <button class="btn  btn-primary" type="button" onclick="location.href='@Url.Action("ViewTrainee",new {trainerID=nowUserId})'">Go Back</button>
+        </p>
+    }
+    </div>
+    <div class="span2"></div>
+</div>

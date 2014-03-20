@@ -1,0 +1,10 @@
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket.Test\bin\ValueWebSocket.Test.dll
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket.Test\bin\ValueWebSocket.Test.pdb
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket.Test\bin\ValueHelper.dll
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket.Test\bin\ValueWebSocket.dll
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket.Test\bin\Microsoft.Office.Interop.Excel.dll
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket.Test\bin\ValueHelper.pdb
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket.Test\bin\ValueWebSocket.pdb
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket.Test\obj\Debug\ResolveAssemblyReference.cache
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket.Test\obj\Debug\ValueWebSocket.Test.dll
+E:\ValueProgram\Value.Socket\WebSocket\ValueWebSocket.Test\obj\Debug\ValueWebSocket.Test.pdb

@@ -1,0 +1,170 @@
+﻿@model TrainingTool.Models.Course
+<link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<body>
+    @{
+HttpCookie _cookie = Request.Cookies["User"];
+  string nowUserId = _cookie["EmployeeId"];
+  int testCount = (int)ViewData["count"];
+  int hasTrainee = (int)ViewData["hasTrainee"];
+}
+    <div class="navbar">
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                    <li>@Html.ActionLink("Index", "Index", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Study Management", "studentIndex", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li>@Html.ActionLink("Course Management", "teachersIndex", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                     @{
+                        if(hasTrainee==1)
+                        {
+                            <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                        }
+                    }
+                </ul>
+            </div>
+    </div>
+    <div class="row-fluid ">
+        <div class="span3"></div>
+        <div class="span6 " align="left">
+                <h2>Details</h2>
+                <table class="table table-bordered">
+                    <tr style="background-color:#D5E2F7">
+                        <td style="width:150px">
+                            <h4>@Html.DisplayFor(model => model.Mark)</h4>
+                        </td>
+                        <td>
+                            <h4>@Html.DisplayFor(model => model.Name)</h4>
+                        </td>
+                    </tr>
+                    <tr style="background-color:#F1F5FC">
+                        <td>Set Date</td>
+                        <td>
+                            @Html.DisplayFor(model => model.setDate)
+                        </td>
+                    </tr>
+                    <tr style="background-color:#F1F5FC">
+                        <td>Catagory</td>
+                        <td>
+                            @Html.DisplayFor(model => model.Type)
+                        </td>
+                    </tr>
+                    
+                    <tr style="background-color:#F1F5FC">
+                        <td>Introduction</td>
+                        <td>
+                            @Html.DisplayFor(model => model.Introduction)
+                        </td>
+                    </tr>
+                </table>
+              <table class="table table-bordered">
+            @{
+                List<TrainingTool.Models.Chapter> chapters = ViewData["contents"] as List<TrainingTool.Models.Chapter>;
+                if(chapters!=null){
+                foreach (TrainingTool.Models.Chapter c in chapters)
+                {
+                    string order = c.chapterID.ToString() + ".Name";
+                <tr style="background-color:#F1F5FC">
+                        <td style="width:150px">@order</td>
+                        <td>
+                             @Html.ActionLink(c.Name, "Edit","Chapter",new{id=c.ID},new{})
+                        </td>
+                    </tr>
+                 }
+                 }
+           }
+                 </table>
+             @*{List<TrainingTool.Models.Chapter> contents = ViewData["contents"] as List<TrainingTool.Models.Chapter>;
+               string nowCourse=Model.ID.ToString();
+                 //string filename = "Apress.Pro.ASP.NET.MVC.4.Framework.Jan.2013.pdf";  }
+               foreach (TrainingTool.Models.Chapter c in contents)
+                 {
+                     <div>
+            <iframe src="~/Courses/@c.contentFile" width="600" height="600" scrolling="yes" name="content"></iframe>
+            @Html.ActionLink("Edit", "Edit", "Chapter", new { id = c.ID }, new { })
+                     </div>
+                      }
+             }*@
+
+
+
+            @*<fieldset>
+                <legend>Course</legend>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.setDate)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.setDate)
+                </div>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.TeacherID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.TeacherID)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Name)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Type)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Type)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Introduction)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Introduction)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.url)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.url)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Mark)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Mark)
+                </div>
+            </fieldset>*@
+            @* <p align="middle">
+                <button class="btn btn-large btn-info" type="button" onclick="location.href='@Url.Action("Create", "Chapter",new { id=Model.ID })'">Add New Chapter</button>
+                <button class="btn btn-large btn-info" type="button" onclick="location.href='@Url.Action("Index", "Course")'">Back To List</button>
+               @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>*@
+            <p align="middle">
+                <button class="btn btn-large btn-primary" type="button" onclick="location.href='@Url.Action("Create", "Chapter",new { courseID=Model.ID })'">Add New Chapter</button>
+                 @{
+                    if(testCount>0){
+                <button class="btn btn-large btn-primary" type="button" onclick="location.href='@Url.Action("editTest", "Course",new {id=Model.ID })'">Edit Test</button>
+                }
+                else{
+                     <button class="btn btn-large btn-primary" type="button" onclick="location.href='@Url.Action("addTest", "Course",new {id=Model.ID })'">Add Test</button>
+                }
+                }
+                @*<button class="btn btn-large btn-primary" type="button" onclick="location.href='@Url.Action("teachersIndex", "Course",new{ userId= nowUserId })'">Back To List</button>*@
+            </p>
+        </div>
+        <div class="span3"></div>
+    </div>
+</body>
+

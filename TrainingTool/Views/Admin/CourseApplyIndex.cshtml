@@ -1,0 +1,142 @@
+﻿@model PagedList.StaticPagedList<TrainingTool.Models.CourseApply>
+
+@{
+    ViewBag.Title = "Course Apply Index";
+}
+
+@using PagedList
+@using PagedList.Mvc
+@using TrainingTool.Models
+@using TrainingTool.Repository 
+
+
+
+@{
+    string AdminEmployeeId = "";
+    HttpCookie _cookie = Request.Cookies["Admin"];
+    if (_cookie == null) { AdminEmployeeId = ""; }
+    else { AdminEmployeeId = _cookie["EmployeeId"];}
+
+    AdminRepository adminRsy = new AdminRepository();
+    var Admin = adminRsy.Find(AdminEmployeeId);
+    string _admin = Admin.UserName as string;
+}
+
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div>
+                <p id="logo">
+                    <p class="semi"> Training Tool
+                        <span id="tagline">back-stage management page <a href="#" class="pull-right" style="color:#ffffff; font-size:1.5em"> Welcome! @_admin​ </a>​</span>
+                    </p>     
+                </p>
+                <div class="nav-collapse collapse"/>
+            </div>
+        </div>
+    </div>
+</header>
+	
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2 main-menu-span">
+            <br/><br/><br/><br/>
+			<div class="well nav-collapse sidebar-nav affix">
+				<ul class="nav nav-tabs nav-stacked main-menu">
+					<li class="nav-header hidden-tablet">Main</li>
+					<li style="margin-left: -2px;"><a href="~/User/Index">User Manager</a></li>
+					<li style="margin-left: -2px;"><a href="~/Admin/CourseApplyIndex">Course Apply</a></li>
+                    <li style="margin-left: -2px;"><a href="~/Admin/UserApply">User Complaint</a></li>
+				</ul>
+			</div><!--/.well -->
+		</div>
+        <div id="content" class="span10">
+            <h2>Course Apply List</h2>
+            <br/>
+            <div>
+                <textarea id="messageBoard" rows="3" cols="20"> </textarea>
+            </div>
+            <br/>
+            <table class="table table-striped table-hover table-bordered bootstrap-datatable datatable">
+               <tr>
+                    <th>Apply Date</th>
+                    <th>Teacher ID</th>
+                    <th>Course Name</th>
+                    <th>Type</th>
+                    <th>For Daparts</th>
+                </tr>
+
+                @foreach (var item in Model) {
+                <tr>
+                    <td>@item.ApplyDate</td>
+                    <td>@item.TeacherID</td>
+                    <td>@item.CourseName</td>
+                    <td>@item.Type</td>
+                    <td>@item.ForDepart</td>
+                    <td>
+                        <button class="btn btn-success" onclick="location.href='@Url.Action("CourseApplyDetails", "Admin", new { id=item.ID})'">Details</button>
+                    </td>
+                </tr>
+                }
+            </table>
+
+            <div class="container">
+                @Html.PagedListPager((PagedList.IPagedList)Model, page => Url.Action("Index", new { page = page }), new PagedListRenderOptions{ LinkToPreviousPageFormat = "Prev", LinkToNextPageFormat = "Next" })
+            </div>
+
+          </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var noSupportMessage = "Your Brower don't support WebSocket!";
+    var ws;
+
+    function connectSocketServer() {
+        var messageBoard = $("#messageBoard");
+
+        var support = "MozWebSocket" in window ? 'MozWebSocket' : ('WebSocket' in window ? 'WebSocket' : null);
+
+        if (support == null) {
+            alert(noSupportMessage);
+            messageBoard.append('*' + noSupportMessage + "<br />");
+            return;
+        }
+
+        messageBoard.append("* Connecting to server..<br />");
+        try {
+            ws = new WebSocket('ws://echo.websocket.org/');
+        } catch (e) {
+            alert(e.Message);
+        }
+
+        ws.onmessage = function (event) {
+            messageBoard.append(event.data + "<br />");
+        }
+
+        ws.onopen = function () {
+            messageBoard.append('* Connection open<br />');
+            sendMessage()
+        }
+
+        ws.onclose = function () {
+            messageBoard.append('* Connection closed<br />');
+        }
+    }
+
+    function sendMessage() {
+        if (ws) {
+            var msg = "WebSocket rocks";
+            ws.send(msg);
+            messageBox.value = "";
+        } else {
+            alert(noSupportMessage);
+        }
+    }
+
+    window.onload = function () {
+        connectSocketServer();
+    }
+</script>

@@ -1,0 +1,45 @@
+﻿@model TrainingTool.Models.TrainerToTrainee
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TrainerToTrainee</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.trainerId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.trainerId)
+            @Html.ValidationMessageFor(model => model.trainerId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.traineeId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.traineeId)
+            @Html.ValidationMessageFor(model => model.traineeId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

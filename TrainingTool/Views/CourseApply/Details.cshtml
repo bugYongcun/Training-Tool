@@ -1,0 +1,71 @@
+﻿@model TrainingTool.Models.CourseApply
+
+@*@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CourseApply</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ApplyDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ApplyDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TeacherID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TeacherID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CourseName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CourseName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Type)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Introduction)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Introduction)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ForDepart)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ForDepart)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.applyState)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.applyState)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.negativeOpinion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.negativeOpinion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

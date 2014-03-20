@@ -1,0 +1,104 @@
+﻿@model TrainingTool.Models.CourseApply
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@using TrainingTool.Models
+@using TrainingTool.Repository 
+
+@{
+    string AdminEmployeeId = "";
+    HttpCookie _cookie = Request.Cookies["Admin"];
+    if (_cookie == null) { AdminEmployeeId = ""; }
+    else { AdminEmployeeId = _cookie["EmployeeId"];}
+
+    AdminRepository adminRsy = new AdminRepository();
+    var Admin = adminRsy.Find(AdminEmployeeId);
+    string _admin = Admin.UserName as string;
+}
+
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div>
+                <p id="logo">
+                    <p class="semi"> Training Tool
+                        <span id="tagline">back-stage management page <a href="#" class="pull-right" style="color:#ffffff; font-size:1.5em"> Welcome! @_admin​ </a>​</span>
+                    </p>     
+                </p>
+                <div class="nav-collapse collapse"/>
+            </div>
+        </div>
+    </div>
+</header>
+	
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2 main-menu-span">
+            <br/><br/><br/><br/>
+			<div class="well nav-collapse sidebar-nav affix">
+				<ul class="nav nav-tabs nav-stacked main-menu">
+					<li class="nav-header hidden-tablet">Main</li>
+					<li style="margin-left: -2px;"><a href="~/User/Index">User Manager</a></li>
+					<li style="margin-left: -2px;"><a href="~/Admin/Course Apply Index">Course Apply</a></li>
+                    <li style="margin-left: -2px;"><a href="~/Admin/User Apply">User Complaint</a></li>
+				</ul>
+			</div><!--/.well -->
+		</div>
+        <div id="content" class="span10">
+            <h2>Course Apply List</h2>
+            <br/>
+            <table class="table table-bordered bootstrap-datatable datatable">
+               <tr>
+                    <th>Apply Date</th>
+                    <th>Teacher ID</th>
+                    <th>Course Name</th>
+                    <th>Type</th>
+                    <th>For Daparts</th>
+                </tr>
+
+                <tr>
+                    <td>@Html.DisplayFor(model => model.ApplyDate)</td>
+                    <td>@Html.DisplayFor(model => model.TeacherID)</td>
+                    <td>@Html.DisplayFor(model => model.CourseName)</td>
+                    <td>@Html.DisplayFor(model => model.Type)</td>
+                    <td>@Html.DisplayFor(model => model.ForDepart)</td>
+                </tr>
+            </table>
+
+            <div style="border: 2px">
+                <h4>Introduction</h4>
+                <div> 
+                    @Html.DisplayFor(model => model.Introduction)
+                </div>
+            </div>
+            
+            <div>
+                @using (Html.BeginForm("RefuseApply", "Admin" , FormMethod.Post))
+                {
+                     @Html.AntiForgeryToken()
+                     @Html.ValidationSummary(true)
+
+                    <fieldset>
+                        <legend> Negative Opinion</legend>
+                        <div>
+                            @Html.TextAreaFor(model => model.negativeOpinion, new { row="3", style="height:180px; width:800px"})
+                        </div>
+
+                        <div style="display:inline-block">
+                            <button class="btn btn-danger" type="submit">Refuse Apply</button>
+                        </div>
+
+                    </fieldset>
+                }
+                <div style="margin-left:5px; display:inline-block">
+                    <button class="btn btn-success" onclick="location.href='@Url.Action("AgressApply", "Admin", new { id = ViewBag.CourseID})'">Agress Apply</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

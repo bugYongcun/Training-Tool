@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TrainingTool.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+    string trainer=ViewData["trainer"] as string;
+}
+
+<h2>Index</h2>
+ @*@{
+            List<string> departs = ViewData["list"] as List<string>;
+            var selectList = new SelectList(departs, ViewBag.currentDepart as string);
+        }
+@using (Html.BeginForm())
+        {
+            <div class="editor-field " align="right">
+                <div id="MySearch" class="input-append search">
+                    @Html.DropDownList("Department", selectList, new { @class = "chzn-select", style = "width:200px;", tabindex = "10", id = "depart-label" })
+                    @Html.TextBox("Keyword", ViewBag.currentKeyword as string, new { @class = "input-medium", style = "width:150px;", placeholder = "Search" })<button type="submit" class="btn">Search!</button>
+                </div>
+              
+            </div>
+        }*@
+<table class="table table-striped table-hover table-bordered bootstrap-datatable datatable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartmentId)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Tel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+                 
+       <button class="btn btn-large btn-primary" type="button" onclick="location.href='@Url.Action("DeleteTrainee", "Admin",new {traineeID=item.EmployeeId,trainerID= trainer})'">DeleteTrainee</button>
+
+        </td>
+    </tr>
+}
+
+</table>
+ @Html.ActionLink("AddTrainee", "AddTrainee", new {trainerID=trainer}) 
+ @Html.ActionLink("Back to Index", "Index", "User", new { });
+

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <style type="text/css">
+        #header_wrap{
+            background-color: #F0F1F4;
+            height: 39px;
+        }
+        p#logo {
+            float: left;
+            font: 27px 'Segoe UI Light',Segoe UI,Tahoma Light,Arial Light,Helvetica,sans-serif;
+            font-weight: lighter;
+            margin-bottom: 1px;
+            position: relative;
+            margin-right: 10px;
+        }
+        .semi {
+            font: 27px 'Segoe UI Semibold','Segoe-Semibold',Segoe UI,Tahoma,Arial,Helvetica,sans-serif;
+        }
+        span#tagline {
+            color: #6a747e;
+            font-size: 0.50em;
+            padding-left: 16px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id ="header_wrap">
+            <p id="logo">
+                <p class="semi">Manage User</p>
+                <span id="tagline">​add,delete or update the employee ​</span>
+            </p>
+        </div>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

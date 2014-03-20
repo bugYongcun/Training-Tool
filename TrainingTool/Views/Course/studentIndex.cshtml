@@ -1,0 +1,216 @@
+﻿@model PagedList.StaticPagedList<TrainingTool.Models.Course>
+
+@using PagedList
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "studentIndex";
+    int hasTrainee = (int)ViewData["hasTrainee"];
+}
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link href="/Content/fuelux.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+@*<script src="@Url.Content("/Scripts/bootstrap.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("/Scripts/all.js")" type="text/javascript"></script>
+<script src="@Url.Content("/Scripts/wizard.js")" type="text/javascript"></script>
+
+<section id="course_page">
+    <div class="navbar">
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                        @{
+                            HttpCookie _cookie = Request.Cookies["User"];
+                            string nowUserId = _cookie["EmployeeId"];
+                        }
+                    <li>@Html.ActionLink("Index", "Index", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li class="divider-vertical"></li>
+                    <li class="active">@Html.ActionLink("Study Management", "studentIndex", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li>@Html.ActionLink("Course Management", "teachersIndex", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                     @{
+                        if(hasTrainee==1)
+                        {
+                            <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                        }
+                    }
+                </ul>
+            </div>
+    </div>
+<div class="row-fluid">
+    <div class="span2">
+        @*<div class="container clearfix" style="max-width: 200px; padding: 8px 0; position:fixed;">
+            <ul class="nav nav-list" >
+                <li class="nav-header"><h4>List header</h4></li>
+                <li><a href="#collapseOneTitle" onclick="open_collapseOne();"><h5>Technical</h5></a></li>
+                <li><a href="#collapseTwoTitle" onclick="open_collapseTwo();"><h5>Business</h5></a></li>
+                <li><a href="#collapseThreeTitle" onclick="open_collapseThree();"><h5>System</h5></a></li>
+                <li class="divider"></li>
+                <li><button class="btn btn-large btn-primary" type="button" onclick="location.href='@Url.Action("Create", "Course")'">Create New Course</button></li>
+            </ul>
+         </div> *@
+    </div>
+    <div class="span8">
+        <div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#required" data-toggle="tab">Required Courses</a></li>
+                <li><a href="#bookmarked" data-toggle="tab">Bookmarked Courses</a></li>
+                <li><a href="#applies" data-toggle="tab">Courses Applied For</a></li>
+                <li><a href="#history" data-toggle="tab">Learning History</a></li>
+            </ul>
+        </div>
+        @{List<TrainingTool.Models.Course> taskcourses = ViewData["taskCourses"] as List<TrainingTool.Models.Course>;
+          List<TrainingTool.Models.Course> savecourses = ViewData["saveCourses"] as List<TrainingTool.Models.Course>;
+          List<TrainingTool.Models.Course> requestcourses = ViewData["requestCourses"] as List<TrainingTool.Models.Course>;
+          List<TrainingTool.Models.Course> learningcourses = ViewData["learningCourses"] as List<TrainingTool.Models.Course>;
+          TrainingTool.Repository.TrainingToolContext db = new TrainingTool.Repository.TrainingToolContext();
+          
+           }
+        <div class="tab-content">
+        <div class="tab-pane active" id="required">
+        @{foreach (var item in taskcourses)
+        {
+        <table class="table table-bordered">
+        <tr style="background-color:#FFBBC9">
+            <td>
+                <h4>@Html.ActionLink(item.Name, "Details", new { lastTime=DateTime.Now,id = item.ID})<span class="label label-important">Required</span></h4>
+            </td>
+        </tr>
+        <tr style="background-color:#FFEEF1">
+            <td>
+                @Html.DisplayFor(modelItem => item.Type);
+            </td>
+        </tr>
+        <tr style="background-color:#FFEEF1">
+            <td>
+                @Html.DisplayFor(modelItem => item.Introduction);
+            </td></tr>
+            @{int chapterCount=db.chapters.Where(c => c.courseID == item.ID).ToList().Count;
+              int chapterLearned = db.taskRecords.Where(c => c.courseID == item.ID && c.userID == nowUserId&&c.readChapter>0).ToList().Count;
+              <tr style="background-color:#FFEEF1">
+            <td>
+                @Html.TextBox("showProgress", "Progress"+chapterLearned.ToString() + "/" + chapterCount.ToString())
+            </td>
+        </tr>
+            }
+        </table>
+        @*<div id="MyWizard" class="wizard">
+	        <ul class="steps">
+		        <li data-target="#step1" class="active"><span class="badge badge-info">1</span><span class="chevron"></span></li>
+		        <li data-target="#step2"><span class="badge">2</span><span class="chevron"></span></li>
+		        <li data-target="#step3"><span class="badge">3</span><span class="chevron"></span></li>
+		        <li data-target="#step4"><span class="badge">4</span><span class="chevron"></span></li>
+		        <li data-target="#step5"><span class="badge">5</span><span class="chevron"></span></li>
+	        </ul>
+        </div>*@
+        }
+        }
+        </div>
+        <div class="tab-pane" id="bookmarked">
+        @{foreach (var item in savecourses)
+          {
+        <table class="table table-bordered">
+        <tr style="background-color:#D5E2F7">
+            <td>
+                <h4>@Html.ActionLink(item.Name, "Details", new { lastTime=DateTime.Now, id = item.ID })<span class="label label-success">Bookmarked</span></h4>
+            </td>
+        </tr>
+        <tr style="background-color:#F1F5FC">
+            <td>
+                @Html.DisplayFor(modelItem => item.Type);
+            </td>
+        </tr>
+        <tr style="background-color:#F1F5FC">
+            <td>
+                @Html.DisplayFor(modelItem => item.Introduction);
+            </td>
+        </tr>
+             @{int chapterCount=db.chapters.Where(c => c.courseID == item.ID).ToList().Count;
+              int chapterLearned = db.saveRecords.Where(c => c.courseID == item.ID && c.userID == nowUserId&&c.readChapter>0).ToList().Count;
+              <tr style="background-color:#FFEEF1">
+            <td>
+                @Html.TextBox("showProgress", "Progress"+chapterLearned.ToString() + "/" + chapterCount.ToString())
+            </td>
+        </tr>
+            }
+        </table>
+          }
+        }
+        </div>
+        <div class="tab-pane" id="applies">
+        @{foreach (var item in requestcourses)
+          {
+        <table class="table  table-bordered">
+        <tr style="background-color:#D5E2F7">
+            <td>
+                <h4>@Html.DisplayFor(modelItem => item.Name)<span class="label label-info">Request Being Processed</span></h4>
+            </td>
+        </tr>
+        <tr style="background-color:#F1F5FC">
+            <td>
+                @Html.DisplayFor(modelItem => item.Type);
+            </td>
+        </tr>
+        <tr style="background-color:#F1F5FC">
+            <td>
+                @Html.DisplayFor(modelItem => item.Introduction);
+            </td>
+        </tr>
+        </table>
+          }
+        }
+        </div>
+        <div class="tab-pane" id="history">
+        @{
+            foreach (var item in learningcourses)
+            {
+        <table class="table table-bordered">
+        <tr style="background-color:#D5E2F7">
+            <td>
+                <h4>@Html.ActionLink(item.Name, "Details", new { lastTime=DateTime.Now, id = item.ID })</h4>
+            </td>
+        </tr>
+        <tr style="background-color:#F1F5FC">
+            <td>
+                @Html.DisplayFor(modelItem => item.Type);
+            </td>
+        </tr>
+        <tr style="background-color:#F1F5FC">
+            <td>
+                @Html.DisplayFor(modelItem => item.Introduction);
+            </td>
+        </tr>
+        </table>
+        }
+        }
+        </div>
+        </div>
+
+@*@Html.Partial("_Paging")*@
+
+
+@*@{
+    foreach(var item in Model)
+    {
+        <br />
+        @Html.ActionLink(item.Name, "Details", new { id=item.ID})
+        <br />
+        //@Html.DisplayFor(modelItem => item.course.Name);
+        <br />
+        @Html.DisplayFor(modelItem => item.Type);
+        <br />
+        @Html.DisplayFor(modelItem => item.Introduction);
+        <br />
+    }
+}*@
+
+    </div>
+</div>
+</section>
+
+    
+    
+
+
+
+
+

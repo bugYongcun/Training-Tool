@@ -1,0 +1,119 @@
+﻿@model TrainingTool.Models.User
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div>
+                <p id="logo">
+                    <p class="semi">Manage User 
+                        <span id="tagline">​add, delete or update the employee ​</span>
+                    </p>     
+                </p>
+                <div class="nav-collapse collapse"/>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <h2>Edit</h2>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>User</legend>
+
+            @Html.HiddenFor(model => model.Id)
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.EmployeeId)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.EmployeeId)
+                @Html.ValidationMessageFor(model => model.EmployeeId)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.DepartmentId)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.DepartmentId)
+                @Html.ValidationMessageFor(model => model.DepartmentId)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.UserName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.UserName)
+                @Html.ValidationMessageFor(model => model.UserName)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Password)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Gender)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Gender)
+                @Html.ValidationMessageFor(model => model.Gender)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Email)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Tel)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Tel)
+                @Html.ValidationMessageFor(model => model.Tel)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.RegTime)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.RegTime, new { @readonly="true"})
+                @Html.ValidationMessageFor(model => model.RegTime)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LastLoginTime)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LastLoginTime, new { @readonly="true"})
+                @Html.ValidationMessageFor(model => model.LastLoginTime)
+            </div>
+
+            <p>
+                <button type="submit" class="btn btn-success">Save</button>
+            </p>
+        </fieldset>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

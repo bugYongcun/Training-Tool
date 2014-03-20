@@ -1,0 +1,9 @@
+﻿@model TrainingTool.Models.User
+@{
+    ViewBag.Title = "User Home Page";
+}
+
+<div class="workspace">
+    <div class ="Nav">您现在的位置： 用户首页</div>
+    <div>@Model.EmployeeId</div> <div>@Html.ActionLink("Logout","Index","Home") </div>
+</div>

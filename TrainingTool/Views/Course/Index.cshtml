@@ -1,0 +1,367 @@
+﻿@model PagedList.StaticPagedList<TrainingTool.Models.Course>
+
+@using PagedList
+@using PagedList.Mvc
+@using TrainingTool.Models
+@using TrainingTool.Repository
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    string nowUserId = "";
+    HttpCookie _cookie = Request.Cookies["User"];
+    if (_cookie == null) { nowUserId = ""; }
+    else { nowUserId = _cookie["EmployeeId"]; }
+
+    UserRepository userRsy = new UserRepository();
+    var User = userRsy.Find(nowUserId);
+    string _user = User.UserName as string;
+    
+   int hasTrainee=(int) ViewData["hasTrainee"];
+}
+
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("/Scripts/all.js")" type="text/javascript"></script>
+
+<script type="text/javascript">
+    function open_collapseOne() {
+        $("#collapseOne").collapse("show");
+        $("#collapseTwo").collapse("hide");
+        $("#collapseThree").collapse("hide");
+    }
+    function open_collapseTwo() {
+        $("#collapseTwo").collapse("show");
+        $("#collapseOne").collapse("hide");
+        $("#collapseThree").collapse("hide");
+    }
+    function open_collapseThree() {
+        $("#collapseThree").collapse("show");
+        $("#collapseTwo").collapse("hide");
+        $("#collapseOne").collapse("hide");
+    }
+</script>
+
+<section id="course_page">
+    <div class="navbar">
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                    <li class="active">@Html.ActionLink("Index", "Index", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Study Management", "studentIndex", new { lastTime=DateTime.Now, userId = nowUserId })</li>
+                    <li>@Html.ActionLink("Course Management", "teachersIndex", new {lastTime=DateTime.Now,  userId = nowUserId })</li>
+                   
+                    @{
+                        if(hasTrainee==1)
+                        {
+                            <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                        }
+                    }
+                </ul>
+
+                <div class="btn-group pull-right">   
+                    <button class='btn dropdown-toggle' data-toggle="dropdown"> @_user<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Logout", "Logout", "Course")</li>
+                    </ul>
+                </div>
+
+                <div class="pull-right" style="margin-top:10px; margin-right:5px">
+                    <p style="color:#000000; font-size:1.5em">Welcome!</p>
+                </div>
+            </div>
+    </div>
+
+<div class="row-fluid">
+    <div class="span2">
+        <ul class="nav nav-list">
+             <li class="nav-header">List header</li>
+             <li class="active"><a href="#">Home</a></li>
+             <li><a href="#">Library</a></li>
+        </ul>
+        <div class="container clearfix" style="max-width: 200px; padding: 8px 0; position:fixed;">
+            <ul class="nav nav-list" >
+                <li class="nav-header"><h4>NavBar</h4></li>
+                <li><a href="#collapseOneTitle" onclick="open_collapseOne();"><h5>Technical</h5></a></li>
+                <li><a href="#collapseTwoTitle" onclick="open_collapseTwo();"><h5>Business</h5></a></li>
+                <li><a href="#collapseThreeTitle" onclick="open_collapseThree();"><h5>System</h5></a></li>
+                @*<li class="divider"></li>*@
+                @*<li><button class="btn btn-large btn-primary" type="button" onclick="location.href='@Url.Action("Create", "Course")'">Create New Course</button></li>*@
+            </ul>
+         </div> 
+             @*@Html.ActionLink("Create New", "Create")*@
+    </div>
+
+    @*<div>
+        @Html.ActionLink("StudentIndex", "studentIndex", new { userId= nowUserId })
+        @Html.ActionLink("TeacherIndex", "teachersIndex", new { userId= nowUserId })
+    </div>*@
+    
+    <div class="span9">
+        
+        @{
+            List<string> departs = ViewData["list"] as List<string>;
+            var selectList = new SelectList(departs, ViewBag.currentDepart as string);
+        }
+        @using (Html.BeginForm())
+        {
+            <div class="editor-field " align="right">
+                <div id="MySearch" class="input-append search">
+                    @Html.DropDownList("Department", selectList, new { @class = "chzn-select", style = "width:200px;", tabindex = "10", id = "depart-label" })
+                    @Html.TextBox("Keyword", ViewBag.currentKeyword as string, new { @class = "input-medium", style = "width:150px;", placeholder = "Search" })<button type="submit" class="btn">Search!</button>
+                </div>
+                @*@Html.DropDownList("Department", selectList, new { @class = "chzn-select", style = "width:200px;", tabindex = "10", id = "depart-label" })
+                @Html.TextBox("Keyword", ViewBag.currentKeyword as string, new {style = "width:150px;", placeholder="Search"})
+                <input type="submit" class="btn btn-primary" value="Search" />*@
+            </div>
+        }
+        @*@Html.PagedListPager((PagedList.IPagedList)Model, page => Url.Action("Index", new { page = page }),new PagedListRenderOptions{ LinkToPreviousPageFormat = "上一页", LinkToNextPageFormat = "下一页" })*@
+        @{  List<int> forList = ViewData["forCourses"] as List<int>;
+            List<int> taskcourses = ViewData["taskCourses"] as List<int>;
+            List<int> savecourses = ViewData["saveCourses"] as List<int>;
+            List<int> requestcourses = ViewData["requestCourses"] as List<int>;
+            List<int> learningcourses = ViewData["learningCourses"] as List<int>;
+            List<TrainingTool.Models.CourseList> courses = ViewData["Courses"] as List<TrainingTool.Models.CourseList>;
+                
+        <div class="accordion" id="accordion2">
+            <div class="accordion-group" id="collapseOneTitle">
+                <div class="accordion-heading" >
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne ">
+                        <h3>Technical</h3>
+                    </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                        @{List<TrainingTool.Models.CourseList> list1 = courses.Where(o => (o.course.Type != null) && (o.type.typeID.StartsWith("1"))).ToList();
+                          if (list1 != null)
+                          {
+                              string str = "";
+                              foreach (var item in list1)
+                              {
+                                  if (str != item.course.Type)
+                                  {
+                                      str = item.course.Type;
+                                <h4>@Html.DisplayFor(modelItem => item.course.Type)</h4>
+                                  }
+                            <table class="table table-bordered">
+                                <tr style="background-color:#D5E2F7">
+                                    <td>
+                                    <h5><strong>
+                                    @{
+                                  if ((forList.Contains(item.course.ID))||(taskcourses.Contains(item.course.ID)))
+                                  {
+                                        @Html.ActionLink(item.course.Name, "Details", new { lastTime=DateTime.Now, id = item.course.ID })                                   
+                                  }
+                                  else
+                                  {
+                                        @Html.DisplayFor(modelItem => item.course.Name)
+                                  }
+                                  if (taskcourses.Contains(item.course.ID))
+                                  {
+                                        <span class="label label-important">Required</span>
+                                  }
+                                  if (savecourses.Contains(item.course.ID))
+                                  {
+                                        <span class="label label-success">Bookmarked</span>
+                                  }
+                                  if (requestcourses.Contains(item.course.ID))
+                                  {
+                                        <span class="label label-info">Request Being Processed</span>
+                                  }
+                            
+                                    }
+                                
+                                        </strong></h5>                           
+                                </td>
+                                <td style="width:115px">
+                                @{
+                                  if ((!forList.Contains(item.course.ID)) && (!requestcourses.Contains(item.course.ID)))
+                                  {    
+                                <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("learningApply", "Course", new { userId= nowUserId ,id=item.course.ID})'" >Apply for</button>
+                                  }
+                            }
+                                </td>
+                               </tr>
+                               @*<tr  style="background-color:#F1F5FC">
+                                    <td colspan="2">
+                                        @Html.DisplayFor(modelItem => item.course.Type)
+                                    </td>
+                                </tr>*@
+                                 <tr style="background-color:#F1F5FC">
+                                    <td colspan="2">
+                                        @Html.DisplayFor(modelItem => item.course.Introduction)
+                                    </td>
+                                </tr>
+                            </table>
+                              }
+                          }
+                         }
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group" id="collapseTwoTitle">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                        <h3>Business</h3>
+                    </a>
+                </div>
+                <div id="collapseTwo" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                        @{List<TrainingTool.Models.CourseList> list2 = courses.Where(o => (o.course.Type != null) && (o.type.typeID.StartsWith("2"))).ToList();
+                          if (list2 != null)
+                          {
+                              string str = "";
+                              foreach (var item in list2)
+                              {
+                                  if (str != item.course.Type)
+                                  {
+                                      str = item.course.Type;
+                                <h4>@Html.DisplayFor(modelItem => item.course.Type)</h4>
+                                  }
+                            <table class="table table-bordered" >
+                                <tr style="background-color:#D5E2F7">
+                                    <td>
+                                    <h5><strong>
+                                    @{
+                                  if ((forList.Contains(item.course.ID)) || (taskcourses.Contains(item.course.ID)))
+                                  {
+                                        @Html.ActionLink(item.course.Name, "Details", new { lastTime=DateTime.Now, id = item.course.ID })
+                                  }
+                                  else
+                                  {
+                                        @Html.DisplayFor(modelItem => item.course.Name)
+                                  }
+                                  if (taskcourses.Contains(item.course.ID))
+                                  {
+                                        <span class="label label-important">Required</span>
+                                  }
+                                  if (savecourses.Contains(item.course.ID))
+                                  {
+                                        <span class="label label-success">Bookmarked</span>
+                                  }
+                                  if (requestcourses.Contains(item.course.ID))
+                                  {
+                                        <span class="label label-info">Request Being Processed</span>
+                                  } 
+                                    }
+                            </strong></h5>
+                            </td>
+                                     <td style="width:115px">
+                                @{
+                                  if ((!forList.Contains(item.course.ID)) && (!requestcourses.Contains(item.course.ID)))
+                                  {    
+                                      <button type="button" class="btn btn-primary" >Apply for</button> 
+                                  }
+                            }
+                                </td>
+                                </tr>
+                                @*<tr style="background-color:#F1F5FC">
+                                    <td colspan="2">
+                                        @Html.DisplayFor(modelItem => item.course.Type)
+                                    </td>
+                                </tr>*@
+                                <tr style="background-color:#F1F5FC">
+                                    <td colspan="2">
+                                        @Html.DisplayFor(modelItem => item.course.Introduction)
+                                    </td>
+                                </tr>
+                            </table>
+                              }
+                          }
+                         }
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group" id="collapseThreeTitle">
+                <div class="accordion-heading" >
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                        <h3>System</h3>
+                    </a>
+                </div>
+                <div id="collapseThree" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                        @{List<TrainingTool.Models.CourseList> list3 = courses.Where(o => (o.course.Type != null) && (o.type.typeID.StartsWith("3"))).ToList();
+                          if (list3 != null)
+                          {
+                              string str = "";
+                              foreach (var item in list3)
+                              {
+                                  if (str != item.course.Type)
+                                  {
+                                      str = item.course.Type;
+                                <h4>@Html.DisplayFor(modelItem => item.course.Type)</h4>
+                                  }
+                            <table class="table table-bordered" >
+                                <tr style="background-color:#D5E2F7">
+                                    <td>
+                                    <h5><strong>
+                                    @{
+                                  if ((forList.Contains(item.course.ID)) || (taskcourses.Contains(item.course.ID)))
+                                  {
+                                        @Html.ActionLink(item.course.Name, "Details", new {lastTime=DateTime.Now,  id = item.course.ID })                                
+                                  }
+                                  else
+                                  {
+                                         @Html.DisplayFor(modelItem => item.course.Name)
+                                  }
+                                  if (taskcourses.Contains(item.course.ID))
+                                  {
+                                        <span class="label label-important">Required</span>
+                                  }
+                                  if (savecourses.Contains(item.course.ID))
+                                  {
+                                        <span class="label label-success">Bookmarked</span>
+                                  }
+                                  if (requestcourses.Contains(item.course.ID))
+                                  {
+                                        <span class="label label-info">Request Being Processed</span>
+                                  }
+                                    }
+                                </strong></h5>
+                                </td>
+                                <td style="width:115px">
+                                @{
+                                  if ((!forList.Contains(item.course.ID)) && (!requestcourses.Contains(item.course.ID)))
+                                  {    
+                                        <button type="button" class="btn btn-primary" >Apply for</button>
+                                  }
+                            }
+                                </td>
+                                </tr>
+                                 
+                                @*<tr style="background-color:#F1F5FC">
+                                    <td colspan="2">
+                                        @Html.DisplayFor(modelItem => item.course.Type)
+                                    </td>
+                                </tr>*@
+                                <tr style="background-color:#F1F5FC">
+                                    <td colspan="2">
+                                        @Html.DisplayFor(modelItem => item.course.Introduction)
+                                    </td>
+                                </tr>
+                            </table>
+                              }
+                          }
+                         }
+                    </div>
+                </div>
+            </div>
+        </div>          
+}
+@*@Html.Partial("_Paging")*@
+
+
+    </div>
+</div>
+</section>
+    
+    
+
+
+
+
+

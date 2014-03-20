@@ -1,0 +1,15 @@
+﻿@model TrainingTool.Models.Error
+
+@{
+    ViewBag.Title = " 发生错误";
+    Layout = "~/Views/Layout/_User.cshtml";
+}
+
+<div>
+    <dl>
+        <dt>@Html.DisplayFor(model => model.Title)</dt>
+        <dd>@Html.Raw(Model.Details)</dd>
+        <dd>@Html.Raw(Model.Cause)</dd>
+        <dd>@Html.Raw(Model.Solution)</dd>
+    </dl>
+</div>

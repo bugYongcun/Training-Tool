@@ -1,0 +1,99 @@
+﻿@model TrainingTool.Models.Chapter
+
+
+<link href="Content/bootstrap.min.css" rel="stylesheet">
+<link href="Content/video-default.css" rel="stylesheet">
+<link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="Scripts/js/jquery.video-ui.js"></script>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+            @{
+                HttpCookie _cookie = Request.Cookies["User"];
+                string nowUserId = _cookie["EmployeeId"];
+                int hasTrainee = (int)ViewData["hasTrainee"];
+            }
+<body>
+    <div class="navbar">
+
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                    <li>@Html.ActionLink("Index", "Index", "Course", new {lastTime=(DateTime)ViewData["startTime"], userId = nowUserId,courseId =Model.courseID, lastChapterID=Model.chapterID  }, new { })</li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Study Management", "studentIndex", "Course", new {lastTime=(DateTime)ViewData["startTime"], userId = nowUserId,courseId =Model.courseID, lastChapterID=Model.chapterID}, new { })</li>
+                    <li>@Html.ActionLink("Course Management", "teachersIndex", "Course", new {lastTime=(DateTime)ViewData["startTime"], userId = nowUserId,courseId =Model.courseID, lastChapterID=Model.chapterID}, new { })</li>
+                 @{
+                        if(hasTrainee==1)
+                        {
+                            <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                        }
+                    }
+                </ul>
+            </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1"></div>
+        <div class="span6" align="middle">
+            <div class="well">
+                @{
+                    string courseName = ViewData["courseName"] as string;
+                }
+            <fieldset>
+                <legend>@Html.DisplayFor(model => model.Name)</legend>
+                <div class="display-field">
+                    <iframe src="~/Courses/@Model.contentFile" width="600" height="720" scrolling="yes" name="content"></iframe>
+                </div>
+            </fieldset>
+            </div>
+            @{
+                string lastChapter = ViewData["lastChapter"] as string;
+                string followingChapter = ViewData["followingChapter"] as string;
+                int lastChapterId = (int)ViewData["lastChapterId"];
+                int followingChapterId = (int)ViewData["followingChapterId"];
+             }
+            
+        </div>
+        <div class="span4">
+            <div id="demo"></div>
+            <div class="display-field">
+                <iframe src="~/Courses/@Model.videoFile" width="450" height="320" scrolling="yes" name="content"></iframe>
+            </div>
+        </div>
+        <div class="span1"></div>
+    </div>
+    <ul class="pager">
+                <li>
+                @if (lastChapter != "")
+                {
+                     @Html.ActionLink("Last Chapter", "Details", new { lastEnterTime = (DateTime)ViewData["startTime"], userId = nowUserId, id = lastChapterId, courseId = Model.courseID, lastID = Model.chapterID  }) }            
+                </li>
+                <li >
+                    @Html.ActionLink("Return to Course Page", "Details", "Course", new {lastTime=(DateTime)ViewData["startTime"], userId = nowUserId,courseId =Model.courseID, lastChapterID=Model.chapterID, id = Model.courseID }, new { })
+                </li>
+                <li>
+                @if (followingChapter != "")
+                {
+                    @Html.ActionLink("Next Chapter", "Details", new { lastEnterTime = (DateTime)ViewData["startTime"], userId = nowUserId, id = followingChapterId, courseId = Model.courseID, lastID = Model.chapterID }) 
+                    
+                }
+                </li>
+            </ul>
+    <script>
+        $('#demo1').videoUI({
+        });
+    </script>
+</body>
+
+<style type="text/css">
+#demo{
+            width:450px;                /*设置div宽度为500像素*/
+            height:280px;              /*设置div高度为200像素*/
+            background:#fff;      /*设置div背景色为黑色*/
+            margin:0 auto;            /*设置div居中显示*/
+            }
+</style>

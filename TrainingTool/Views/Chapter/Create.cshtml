@@ -1,0 +1,137 @@
+﻿@model TrainingTool.Models.Chapter
+
+@{
+    ViewBag.Title = "Create";
+    int nowCourse = (int)ViewData["nowCourse"];
+}
+<link href="/Content/bootstrap1.css" rel="stylesheet" type="text/css" />
+<link href="/Content/bootstarp1.min.css" rel="stylesheet" type="text/css" />
+@{
+    HttpCookie _cookie = Request.Cookies["User"];
+    string nowUserId = _cookie["EmployeeId"];
+    int hasTrainee = (int)ViewData["hasTrainee"];
+}
+
+@*
+<style type="text/css">
+body{ font-size:14px;}
+input{ vertical-align:middle; margin:0; padding:0}
+.file-box{ position:relative;width:340px}
+.txt{ height:22px; border:1px solid #cdcdcd; width:180px;}
+.btn{ background-color:#FFF; border:1px solid #CDCDCD; width:70px;}
+.file{ position:absolute; top:0; right:80px; height:24px; filter:alpha(opacity:0);opacity: 0;width:300px }
+</style>
+
+
+<style type="text/css">
+body{ font-size:14px;}
+input{ vertical-align:middle; margin:0; padding:0}
+.file-box1{ position:relative;width:340px}
+.txt1{ height:22px; border:1px solid #cdcdcd; width:180px;}
+.btn1{ background-color:#FFF; border:1px solid #CDCDCD; width:70px;}
+.file1{ position:absolute; top:0; right:80px; height:24px; filter:alpha(opacity:0);opacity: 0;width:300px }
+</style>
+*@
+
+<div class="navbar">
+
+            <div class="navbar-inner">
+                <a class="brand" href="#">Equities Training Portal</a>
+                <ul class="nav">
+                    <li>@Html.ActionLink("Index", "Index", "Course", new {lastTime=DateTime.Now, userId = nowUserId  }, new { })</li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink("Study Management", "studentIndex", "Course", new { lastTime=DateTime.Now, userId = nowUserId  }, new { })</li>
+                    <li>@Html.ActionLink("Course Management", "teachersIndex", "Course", new { lastTime=DateTime.Now, userId = nowUserId  }, new { })</li>
+                     @{
+                        if(hasTrainee==1)
+                        {
+                            <li>@Html.ActionLink("My Trainees", "ViewTrainee", "trainerToTrainee", new { trainerID = nowUserId }, new { })</li>
+                        }
+                    }
+                </ul>
+            </div>
+    </div>
+<div class="row-fluid">
+<div class="span2"></div>
+<div class="span8">
+    <div align="middle">
+    @using (Html.BeginForm("Create", "Chapter", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+                  @Html.ValidationSummary(true)
+        
+     <fieldset class="form-horizontal">
+        <legend>New Chapter</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+          <div class="editor-field">
+            @Html.TextBox("Course", nowCourse,new{style="display:none;"})
+           
+        </div>
+     @*   <div class="editor-label">
+            @Html.LabelFor(model => model.contentFile)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.contentFile)
+            @Html.ValidationMessageFor(model => model.contentFile)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.videoFile)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.videoFile)
+            @Html.ValidationMessageFor(model => model.videoFile)
+        </div>*@
+
+                    <div class="editor-label">
+                        Upload PDF Resource
+                    </div>
+                    <div class="editor-field">
+                    <div class="file-box">
+                        @*<input type="text" name="textfield" id="textfield" class="txt" /> 
+                        <input type="button" class="btn" value="浏览..." /> 
+                        <input type="file" name="contentfile" class="file" id="fileField"  onchange="document.getElementById('textfield').value=this.value" />       
+                        *@
+                        <input type="file" name="contentfile" />  
+                     
+                    </div>
+                    </div>
+                    <div class="editor-label">
+                        Upload Video Resource
+                    </div>
+                    <div class="editor-field">
+                    <div class="file-box1">
+                        @*
+                        <input type="text" name="textfield" id="textfield1" class="txt1" /> 
+                        <input type="button" class="btn" value="浏览..." /> 
+                        <input type="file" name="videofile" class="file1" id="fileField1"  onchange="document.getElementById('textfield').value=this.value" />*@
+                        <input type="file" name="videofile" /> 
+                    </div>
+                    </div>
+
+                    <p>
+                        @*<input type="submit" name="submit" class="btn btn-large btn-info"  value="上传" /> *@   
+                        <input type="submit" class="btn btn-large btn-primary"  value="Create" />
+                    </p>      
+                </fieldset>
+                
+            }
+        </div>
+
+@*
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+</div>
+<div class="span2"></div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

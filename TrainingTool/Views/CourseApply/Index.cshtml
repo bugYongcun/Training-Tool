@@ -1,0 +1,47 @@
+﻿@model IEnumerable<TrainingTool.Models.CourseApply>
+
+@using PagedList
+@using PagedList.Mvc
+@using TrainingTool.Models
+
+@{
+    ViewBag.Title = "Admin Index";
+}
+
+
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div>
+                <p id="logo">
+                    <p class="semi"> Equities Training Portal
+                        <span id="tagline">back-stage management page​</span>
+                    </p>     
+                </p>
+                <div class="nav-collapse collapse"/>
+            </div>
+        </div>
+    </div>
+</header>
+	
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2 main-menu-span">
+            <br/><br/><br/><br/>
+			<div class="well nav-collapse sidebar-nav affix">
+				<ul class="nav nav-tabs nav-stacked main-menu">
+					<li class="nav-header hidden-tablet">Main</li>
+					<li style="margin-left: -2px;"><a href="~/User/Index">User Manager</a></li>
+					<li style="margin-left: -2px;"><a href="~/CourseApply/Index">Course Apply</a></li>
+                    <li style="margin-left: -2px;"><a href="~/CourseApply/Index">User Complaint</a></li>
+				</ul>
+			</div><!--/.well -->
+		</div>
+        <div id="content" class="span10">
+            <h2>Course Apply List</h2>
+            <br/>
+        </div>
+    </div>
+</div>

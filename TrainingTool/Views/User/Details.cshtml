@@ -1,0 +1,90 @@
+﻿@model TrainingTool.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<header>
+        <div id ="header_wrap">
+            <p id="logo">
+                <p class="semi">Manage User 
+                    <span id="tagline">​add, delete or update the employee ​</span>
+                </p>     
+            </p>
+        </div>
+</header>
+
+<div class="container">
+    <h2>Details</h2>
+
+    <fieldset>
+        <legend>User</legend>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.EmployeeId)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.EmployeeId)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.DepartmentId)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.DepartmentId)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.UserName)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.UserName)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Password)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Password)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Gender)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Gender)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Email)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Tel)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Tel)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.RegTime)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.RegTime)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.LastLoginTime)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.LastLoginTime)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

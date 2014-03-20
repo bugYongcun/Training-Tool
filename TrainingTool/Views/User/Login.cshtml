@@ -1,0 +1,94 @@
+﻿@model TrainingTool.Models.UserLogin
+
+@{
+    ViewBag.Title = "Login Page";
+}
+
+<body>
+	<div class="container">
+		<header class="jumbotron subhead" id="page_header">
+			<img src="~/Images/Login_header.png">
+		</header>
+	</div>
+
+	<div class="container">    
+		<h2 style="
+						text-shadow: 0 1px 0 #fff;
+						border-bottom: 1px solid #e5e5e5"
+					>Training Tool</h2>
+
+				<br>
+        <div class="row-fluid">
+		    <div class="span7">
+			    <br><br>
+			    <p style="font-weight: normal; font-size: 60px; line-height: 1
+						       ">Share Knowledge<br>
+					    become better,<br> together</p>
+			    <p class="subheading" style="color: #888; font-size: 18px; 
+						       line-height: 1.5"> 
+					    A platform which can help you to share you new technique
+					    <br>to make it's aware of everybody </p>  
+		    </div>
+			
+            <br/><br/>
+		    <div class="span5">
+			    @using (Html.BeginForm()) 
+                { 
+                    @Html.ValidationSummary(true) 
+
+                    <div class="form" style="margin-top:50px"> 
+                        <div class="control-group">
+                            <div style="float:left">
+                                <label style="font-weight: bold" class="control-label" >Employee ID:</label> 
+                            </div>
+                            <div class="ctrl" style="float:right">@Html.EditorFor(model => model.EmployeeId) 
+                                @Html.ValidationMessageFor(model => model.EmployeeId) 
+                            </div> 
+                        </div>
+                        <br/><br/><br/>
+                        <div class="control-group">
+                            <div style="float:left">
+                                <label style="font-weight: bold" class="control-label" >Password:</label> 
+                            </div>
+                            <div class="ctrl" style="float:right">@Html.PasswordFor(model => model.Password) 
+                                @Html.ValidationMessageFor(model => model.Password) 
+                            </div> 
+                        </div> 
+                 
+                        <br/><br/>
+                        <div class="control-group">
+                            <div style="float:left">
+                                <label style="font-weight: bold" class="control-label">Verification Code:</label>
+                            </div>
+                            <div style="float:right">
+                                @Html.TextBoxFor(model => model.VerificationCode) 
+                                @Html.ValidationMessageFor(model => model.VerificationCode) 
+                            </div>
+                            <img style="margin-left: 300px" id="verificationcode" alt="" src="@Url.Action("VerificationCode", "User")" /> 
+                        </div> 
+                        <br/>
+                        <div style="margin-left: 100px">
+                            <button type="submit" class="btn btn-primary">Login</button>&nbsp &nbsp<span><a href="~/Admin/Login">Are you a administrator?</a></span>
+                        </div> 
+                    </div> 
+                } 
+               </div>
+		 </div>
+      </div>
+	<br><br><br>
+	<div class="container">
+		<footer class="footer">
+			<img  src="~/Images/Login_footer.png"/>
+		</footer>
+	</div>
+ </body>
+
+<script type="text/javascript"> 
+    $("#verificationcode").click(function () {
+        $("#verificationcode").attr("src", "/User/VerificationCode?" + new Date()); 
+    }) 
+
+</script> 
+@section Scripts { 
+    @Scripts.Render("~/bundles/jqueryval") 
+}
